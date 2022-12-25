@@ -8,8 +8,6 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "test": "vitest run"
   },
   "dependencies": {
@@ -33,7 +31,6 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.31.11",
-    "gh-pages": "^4.0.0",
     "jsdom": "^20.0.3",
     "prettier": "^2.8.1",
     "typescript": "*",
