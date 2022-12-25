@@ -1,8 +1,12 @@
 import { Title } from "../components/typography/title.component";
 import { useEffect, useState } from "react";
 
+interface Todo {
+  title: string;
+}
+
 export function HomePage() {
-  const [todo, setTodo] = useState(null);
+  const [todo, setTodo] = useState<Todo | null>(null);
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/todos/1")
