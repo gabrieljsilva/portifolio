@@ -1,4 +1,4 @@
-import { Title } from "../components/typography/title.component";
+import { Text } from "../components";
 import { useEffect, useState } from "react";
 
 interface Todo {
@@ -16,15 +16,15 @@ export function HomePage() {
   }, []);
 
   if (!todo) {
-    return <Title>Loading...</Title>;
+    return <Text>Loading...</Text>;
   }
 
   return (
     <>
-      <Title variant={"title"}>Hello World</Title>
-      <Title variant={"subtitle"}>Hello World</Title>
-      <Title variant={"body"}>Hello World</Title>
-      <Title>{todo.title}</Title>
+      <Text variant={"title"}>Hello World</Text>
+      <Text variant={"subtitle"}>Hello World</Text>
+      <Text variant={"body"}>Hello World</Text>
+      <Text>{todo.title}</Text>
     </>
   );
 }
