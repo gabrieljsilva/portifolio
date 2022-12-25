@@ -6,9 +6,8 @@ const APP_PORT = 3000;
 
 export default defineConfig({
   plugins: [react()],
-  base: "/portifolio",
+  base: "/",
   server: {
-    base: "/portifolio",
     port: APP_PORT,
     host: APP_HOST,
     hmr: {
