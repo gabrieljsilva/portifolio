@@ -1,16 +1,26 @@
 import { Title } from "../components/typography/title.component";
+import { useEffect, useState } from "react";
 
 export function HomePage() {
-  fetch("https://jsonplaceholder.typicode.com/todos/1")
-    .then(async (response) => await response.json())
-    .then((json) => console.log(json))
-    .catch((e) => console.error(e));
+  const [todo, setTodo] = useState(null);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos/1")
+      .then(async (response) => await response.json())
+      .then((json) => setTodo(json))
+      .catch((e) => console.error(e));
+  }, []);
+
+  if (!todo) {
+    return <Title>Loading...</Title>;
+  }
 
   return (
     <>
       <Title variant={"title"}>Hello World</Title>
       <Title variant={"subtitle"}>Hello World</Title>
       <Title variant={"body"}>Hello World</Title>
+      <Title>{todo.title}</Title>
     </>
   );
 }
