@@ -29,9 +29,20 @@ export interface Grayscale {
   G90: string;
 }
 
+export interface FontVariants {
+  title: string;
+  subtitle: string;
+  body: string;
+}
+
+export type FontWeights = Record<keyof FontSizes, string>;
+
 declare module "styled-components" {
   export interface DefaultTheme {
     fontFamily: string[];
     colors: Palette;
+    fonts: FontVariants;
+    fontSizes: FontVariants;
+    fontWeights: FontWeights;
   }
 }

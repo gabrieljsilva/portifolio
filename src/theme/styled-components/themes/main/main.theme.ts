@@ -2,6 +2,21 @@ import { Theme } from "../../theme";
 
 export const mainTheme = new Theme({
   fontFamily: ["Roboto", "Sans Serif"],
+  fonts: {
+    title: "Roboto",
+    subtitle: "Roboto",
+    body: "Sans Serif",
+  },
+  fontSizes: {
+    title: "2.5rem",
+    subtitle: "1.75rem",
+    body: "1rem",
+  },
+  fontWeights: {
+    title: "600",
+    subtitle: "400",
+    body: "100",
+  },
   colors: {
     light: {
       main: "white",
