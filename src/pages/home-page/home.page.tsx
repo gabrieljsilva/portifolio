@@ -24,6 +24,7 @@ export function HomePage() {
       <Text variant={"title"}>Hello World</Text>
       <Text variant={"subtitle"}>Hello World</Text>
       <Text variant={"body"}>Hello World</Text>
+      <Text variant={"body"}>Hello Gabriel Silva</Text>
       <Text>{todo.title}</Text>
     </>
   );
