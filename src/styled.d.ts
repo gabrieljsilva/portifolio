@@ -33,9 +33,10 @@ export interface FontVariants {
   title: string;
   subtitle: string;
   body: string;
+  thinTitle: string;
 }
 
-export type FontWeights = Record<keyof FontSizes, string>;
+export type FontWeights = Record<keyof FontVariants, string>;
 
 declare module "styled-components" {
   export interface DefaultTheme {

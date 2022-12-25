@@ -1,4 +1,4 @@
-import { Text } from "../components";
+import { Text } from "../../components";
 import { useEffect, useState } from "react";
 
 interface Todo {

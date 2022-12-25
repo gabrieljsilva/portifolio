@@ -6,16 +6,19 @@ export const mainTheme = new Theme({
     title: "Roboto",
     subtitle: "Roboto",
     body: "Sans Serif",
+    thinTitle: "Roboto",
   },
   fontSizes: {
     title: "2.5rem",
     subtitle: "1.75rem",
     body: "1rem",
+    thinTitle: "2.5rem",
   },
   fontWeights: {
     title: "600",
     subtitle: "400",
     body: "100",
+    thinTitle: "100",
   },
   colors: {
     light: {
