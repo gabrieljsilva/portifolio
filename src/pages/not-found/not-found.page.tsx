@@ -4,7 +4,7 @@ export function NotFoundPage() {
   return (
     <Flex width={"100%"} height={"100vh"} justifyContent={"center"} alignItems={"center"}>
       <Text aria-label={"not-found-message"} variant={"thinTitle"}>
-        PAGE NOT FOUND
+        PAGE NOT FOUNDD
       </Text>
     </Flex>
   );
