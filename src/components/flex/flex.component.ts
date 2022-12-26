@@ -1,7 +1,7 @@
 import Styled from "styled-components";
 import { Container, ContainerProps } from "./container.component";
 
-interface FlexProps extends ContainerProps {
+export interface FlexProps extends ContainerProps {
   direction?: "row" | "column" | "row-reverse" | "column-reverse";
   justifyContent?: "center" | "flex-start" | "flex-end" | "space-around" | "space-between";
   alignItems?: "center" | "flex-start" | "flex-end" | "stretch";

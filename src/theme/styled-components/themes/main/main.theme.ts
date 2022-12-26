@@ -27,38 +27,45 @@ export const mainTheme = new Theme({
     },
     primary: {
       main: "#F72585",
-      contrast: "",
+      contrast: "#FFF",
     },
     secondary: {
       main: "#7209B7",
-      contrast: "",
+      contrast: "white",
     },
     success: {
       main: "",
-      contrast: "",
+      contrast: "white",
     },
     info: {
       main: "",
-      contrast: "",
+      contrast: "white",
     },
     warning: {
       main: "",
-      contrast: "",
+      contrast: "white",
     },
     danger: {
       main: "",
+      contrast: "white",
+    },
+    lightGray: {
+      main: "#C7C7C7",
       contrast: "",
     },
-    grayscale: {
-      G10: "",
-      G20: "",
-      G30: "",
-      G40: "",
-      G50: "",
-      G60: "",
-      G70: "",
-      G80: "",
-      G90: "",
+  },
+  buttonSizes: {
+    sm: {
+      fontSize: "18px",
+      padding: "8px",
+    },
+    md: {
+      fontSize: "18px",
+      padding: "4px 16px",
+    },
+    lg: {
+      fontSize: "18px",
+      padding: "8px",
     },
   },
 });
