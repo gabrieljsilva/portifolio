@@ -1,0 +1,7 @@
+import { ElementType } from "react";
+
+export interface RouteItem {
+  path: string;
+  Layout: ElementType;
+  Screen: ElementType;
+}

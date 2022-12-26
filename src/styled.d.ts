@@ -9,24 +9,12 @@ export interface Palette {
   danger: Color;
   warning: Color;
   info: Color;
-  grayscale: Grayscale;
+  lightGray: Color;
 }
 
 export interface Color {
   main: string;
   contrast?: string;
-}
-
-export interface Grayscale {
-  G10: string;
-  G20: string;
-  G30: string;
-  G40: string;
-  G50: string;
-  G60: string;
-  G70: string;
-  G80: string;
-  G90: string;
 }
 
 export interface FontVariants {
@@ -38,6 +26,17 @@ export interface FontVariants {
 
 export type FontWeights = Record<keyof FontVariants, string>;
 
+export interface ButtonSize {
+  fontSize: string;
+  padding: string;
+}
+
+export interface ButtonSizes {
+  sm: ButtonSize;
+  md: ButtonSize;
+  lg: ButtonSize;
+}
+
 declare module "styled-components" {
   export interface DefaultTheme {
     fontFamily: string[];
@@ -45,5 +44,6 @@ declare module "styled-components" {
     fonts: FontVariants;
     fontSizes: FontVariants;
     fontWeights: FontWeights;
+    buttonSizes: ButtonSizes;
   }
 }
