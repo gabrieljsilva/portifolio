@@ -1,6 +1,7 @@
 import { Theme } from "../../theme";
 
 export const mainTheme = new Theme({
+  headerHeight: "3.5em",
   fontFamily: ["Roboto", "Sans Serif"],
   fonts: {
     title: "Roboto",

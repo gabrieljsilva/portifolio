@@ -45,5 +45,6 @@ declare module "styled-components" {
     fontSizes: FontVariants;
     fontWeights: FontWeights;
     buttonSizes: ButtonSizes;
+    headerHeight: string;
   }
 }
