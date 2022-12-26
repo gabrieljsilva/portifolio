@@ -3,6 +3,8 @@ import styled from "styled-components";
 export interface ContainerProps {
   width?: string;
   height?: string;
+  minWidth?: string;
+  minHeight?: string;
   padding?: string;
   margin?: string;
   border?: string;
@@ -12,6 +14,9 @@ export interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
   width: ${({ width }) => width ?? "initial"};
+  height: ${({ height }) => height ?? "initial"};
+  min-width: ${({ minWidth }) => minWidth ?? "initial"};
+  min-height: ${({ minHeight }) => minHeight ?? "initial"};
   height: ${({ height }) => height ?? "initial"};
   padding: ${({ padding }) => padding ?? "initial"};
   margin: ${({ margin }) => margin ?? "initial"};

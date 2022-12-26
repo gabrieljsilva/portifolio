@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 export function PublicLayout() {
   return (
-    <FlexColumn>
+    <FlexColumn minHeight={"100vh"}>
       <Navbar
         items={[
           {
