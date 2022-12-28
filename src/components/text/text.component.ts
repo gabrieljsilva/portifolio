@@ -15,4 +15,5 @@ export const Text = Styled.h1<TextProps>`
     font-size: ${({ variant, theme }) => (variant ? theme.fontSizes[variant] : DEFAULT_FONT_SIZE)};
     font-weight: ${({ variant, theme }) => (variant ? theme.fontWeights[variant] : DEFAULT_FONT_WEIGHT)};
     text-decoration: ${({ textDecoration }) => textDecoration ?? "none"};
+    font-family: ${({ variant, theme }) => (variant ? theme.fonts[variant] : "parent")};
 `;
