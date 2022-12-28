@@ -7,18 +7,20 @@ import { useTheme } from "styled-components";
 
 export function HomePage() {
   const theme = useTheme();
+  const particlesHeight = `calc(100vh - ${theme.topBarNavigationHeight} - 5px)`; // 5px is used to prevent scroll
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
   }, []);
 
   return (
-    <Container height={`calc(100vh - ${theme.headerHeight})`}>
+    <Container height={`calc(100vh - ${theme.topBarNavigationHeight})`}>
       <Particles
         id="tsparticles"
         init={particlesInit}
         options={{
           style: {
-            height: `calc(100vh - ${theme.headerHeight} - 5px)`, // 5px is used to prevent scroll
+            height: particlesHeight,
+            position: "fixed",
           },
           ...ParticleOptions,
         }}
@@ -37,10 +39,10 @@ const ParticleOptions: IParticlesProps["options"] = {
   fpsLimit: 60,
   particles: {
     color: {
-      value: "#000",
+      value: "#fff",
     },
     links: {
-      color: "#000",
+      color: "#fff",
       distance: 150,
       enable: true,
       opacity: 0.25,

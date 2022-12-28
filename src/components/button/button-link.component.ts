@@ -3,8 +3,6 @@ import { Button } from "./button.component";
 
 export const ButtonLink = Styled(Button)`
   background-color: transparent;
-  color: ${({ theme, color }) => (color ? theme.colors[color].main : theme.colors.primary.main)};
-  &&& {
-    text-decoration: none;
-  }
+  color: ${({ theme, color }) => (color ? theme.colors[color].main : theme.colors.light.main)};
+  cursor: pointer;
 `;

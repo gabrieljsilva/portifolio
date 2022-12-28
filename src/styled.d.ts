@@ -22,6 +22,7 @@ export interface FontVariants {
   subtitle: string;
   body: string;
   thinTitle: string;
+  menuItem: string;
 }
 
 export type FontWeights = Record<keyof FontVariants, string>;
@@ -45,6 +46,6 @@ declare module "styled-components" {
     fontSizes: FontVariants;
     fontWeights: FontWeights;
     buttonSizes: ButtonSizes;
-    headerHeight: string;
+    topBarNavigationHeight: string;
   }
 }
