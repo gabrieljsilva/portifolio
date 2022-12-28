@@ -1,4 +1,4 @@
-import { NavbarItemProps } from "../../../../components/navbar/fragments";
+import { NavbarItemProps } from "../../../../components/navbar/fragments/navbar-item";
 
 export const publicMenuItems: Array<Omit<NavbarItemProps, "active">> = [
   {

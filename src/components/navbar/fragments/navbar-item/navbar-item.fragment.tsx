@@ -1,9 +1,9 @@
-import { Flex } from "../../flex";
-import { Text } from "../../text";
+import { Flex } from "../../../flex";
+import { Text } from "../../../text";
 import { Link } from "react-router-dom";
-import { ButtonLink } from "../../button";
+import { ButtonLink } from "../../../button";
 import { useTheme } from "styled-components";
-import { Container } from "../../flex/container.component";
+import * as S from "./navbar-item.styles";
 
 export interface NavbarItemProps {
   key: string;
@@ -19,11 +19,11 @@ export function NavbarItem({ name, path, active }: NavbarItemProps) {
     <Link to={path}>
       <Flex margin={"0px 8px"} padding={"8px 0"}>
         <ButtonLink>
-          <Container borderBottom={active ? `1px solid ${theme.colors.primary.main}` : undefined}>
+          <S.NavbarItemAnimatedContainer borderBottom={active ? `1px solid ${theme.colors.primary.main}` : undefined}>
             <Text color={"light"} variant={"menuItem"}>
               {name}
             </Text>
-          </Container>
+          </S.NavbarItemAnimatedContainer>
         </ButtonLink>
       </Flex>
     </Link>
