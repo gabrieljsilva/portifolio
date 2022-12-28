@@ -5,13 +5,8 @@ import { AnimatedParticles } from "../../components";
 
 export function HomePage() {
   const theme = useTheme();
-  const particlesHeight = `calc(100vh - ${theme.topBarNavigationHeight} - 5px)`; // 5px is used to prevent scroll
-
   const { options, initializer } = useParticles({
-    style: {
-      height: particlesHeight,
-      position: "fixed",
-    },
+    style: { position: "fixed" },
   });
 
   return (
