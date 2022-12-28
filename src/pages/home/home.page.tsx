@@ -20,6 +20,7 @@ export function HomePage() {
         options={{
           style: {
             height: particlesHeight,
+            position: "fixed",
           },
           ...ParticleOptions,
         }}
@@ -38,10 +39,10 @@ const ParticleOptions: IParticlesProps["options"] = {
   fpsLimit: 60,
   particles: {
     color: {
-      value: "#000",
+      value: "#fff",
     },
     links: {
-      color: "#000",
+      color: "#fff",
       distance: 150,
       enable: true,
       opacity: 0.25,

@@ -22,6 +22,7 @@ export interface FontVariants {
   subtitle: string;
   body: string;
   thinTitle: string;
+  menuItem: string;
 }
 
 export type FontWeights = Record<keyof FontVariants, string>;

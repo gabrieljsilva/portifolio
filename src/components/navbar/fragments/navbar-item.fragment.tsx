@@ -20,7 +20,9 @@ export function NavbarItem({ name, path, active }: NavbarItemProps) {
       <Flex margin={"0px 8px"} padding={"8px 0"}>
         <ButtonLink>
           <Container borderBottom={active ? `1px solid ${theme.colors.primary.main}` : undefined}>
-            <Text variant={"body"}>{name}</Text>
+            <Text color={"light"} variant={"menuItem"}>
+              {name}
+            </Text>
           </Container>
         </ButtonLink>
       </Flex>
