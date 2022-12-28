@@ -1,1 +1,1 @@
-export * from "./navbar-item.fragment";
+export * from "./navbar-item";

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useLocation } from "react-router-dom";
-import { NavbarItemProps } from "../../components/navbar/fragments";
+import { NavbarItemProps } from "../../components/navbar/fragments/navbar-item";
 
 export function useNavbar(items: Array<Omit<NavbarItemProps, "active">>) {
   const location = useLocation();

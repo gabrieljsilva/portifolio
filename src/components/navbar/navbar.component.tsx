@@ -1,5 +1,5 @@
 import { Flex } from "../flex";
-import { NavbarItem, NavbarItemProps } from "./fragments";
+import { NavbarItem, NavbarItemProps } from "./fragments/navbar-item";
 import { useTheme } from "styled-components";
 
 interface NavbarProps {
