@@ -47,5 +47,7 @@ declare module "styled-components" {
     fontWeights: FontWeights;
     buttonSizes: ButtonSizes;
     topBarNavigationHeight: string;
+
+    getRemainingScreenHeight: () => string;
   }
 }
