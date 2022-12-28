@@ -10,6 +10,7 @@ export interface ContainerProps {
   border?: string;
   borderBottom?: string;
   borderColor?: string;
+  backgroundColor?: string;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -23,4 +24,5 @@ export const Container = styled.div<ContainerProps>`
   border: ${({ border }) => border ?? "initial"};
   border-bottom: ${({ borderBottom }) => borderBottom ?? "initial"};
   border-color: ${({ borderColor }) => borderColor ?? "initial"};
+  background-color: ${({ backgroundColor }) => backgroundColor ?? "initial"};
 `;

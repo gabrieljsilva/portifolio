@@ -9,7 +9,7 @@ export class Theme implements DefaultTheme {
   public fontSizes: FontVariants;
   public fontWeights: FontWeights;
   public buttonSizes: ButtonSizes;
-  public headerHeight: string;
+  public topBarNavigationHeight: string;
 
   constructor(theme: DefaultTheme) {
     this.fontFamily = theme.fontFamily;
@@ -18,6 +18,6 @@ export class Theme implements DefaultTheme {
     this.fontSizes = theme.fontSizes;
     this.fontWeights = theme.fontWeights;
     this.buttonSizes = theme.buttonSizes;
-    this.headerHeight = theme.headerHeight;
+    this.topBarNavigationHeight = theme.topBarNavigationHeight;
   }
 }

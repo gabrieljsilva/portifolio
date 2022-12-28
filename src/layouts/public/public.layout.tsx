@@ -1,33 +1,14 @@
 import { FlexColumn, Navbar } from "../../components";
 import { Outlet } from "react-router-dom";
+import { useNavbar } from "../../hooks";
+import { publicMenuItems } from "./domain";
 
 export function PublicLayout() {
+  const navbar = useNavbar(publicMenuItems);
+
   return (
     <FlexColumn minHeight={"100vh"}>
-      <Navbar
-        items={[
-          {
-            key: "HOME",
-            name: "Home",
-            path: "/",
-          },
-          {
-            key: "ABOUT",
-            name: "About",
-            path: "/about",
-          },
-          {
-            key: "SKILLS",
-            name: "Skills",
-            path: "/skills",
-          },
-          {
-            key: "CASES",
-            name: "Cases",
-            path: "/cases",
-          },
-        ]}
-      />
+      <Navbar {...navbar} />
       <Outlet />
     </FlexColumn>
   );
