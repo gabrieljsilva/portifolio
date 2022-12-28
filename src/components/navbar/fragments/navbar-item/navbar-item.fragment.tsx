@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom";
+import { useTheme } from "styled-components";
 import { Flex } from "../../../flex";
 import { Text } from "../../../text";
-import { Link } from "react-router-dom";
 import { ButtonLink } from "../../../button";
-import { useTheme } from "styled-components";
 import * as S from "./navbar-item.styles";
 
 export interface NavbarItemProps {
