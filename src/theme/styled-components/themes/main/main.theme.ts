@@ -9,6 +9,8 @@ export const mainTheme = new Theme({
     body: "Nunito",
     thinTitle: "Roboto",
     menuItem: "Nunito",
+    cardTitle: "Roboto",
+    cardBody: "Nunito",
   },
   fontSizes: {
     title: "2.5rem",
@@ -16,6 +18,8 @@ export const mainTheme = new Theme({
     body: "1.25rem",
     thinTitle: "2.5rem",
     menuItem: "1.25rem",
+    cardTitle: "1.75rem",
+    cardBody: "1rem",
   },
   fontWeights: {
     title: "600",
@@ -23,6 +27,8 @@ export const mainTheme = new Theme({
     body: "300",
     thinTitle: "100",
     menuItem: "900",
+    cardTitle: "600",
+    cardBody: "300",
   },
   colors: {
     light: {

@@ -14,6 +14,12 @@ interface TextProps {
   boxShadow?: CSSProperties["boxShadow"];
   backgroundColor?: CSSProperties["backgroundColor"];
   textAlign?: CSSProperties["textAlign"];
+  lineHeight?: CSSProperties["lineHeight"];
+  margin?: CSSProperties["margin"];
+  marginTop?: CSSProperties["marginTop"];
+  marginBottom?: CSSProperties["marginBottom"];
+  marginLeft?: CSSProperties["marginLeft"];
+  marginRight?: CSSProperties["marginRight"];
 }
 
 export const Text = Styled.h1<TextProps>`
@@ -26,4 +32,10 @@ export const Text = Styled.h1<TextProps>`
     ${applyCssProperty("boxShadow")}
     ${applyCssProperty("backgroundColor")}
     ${applyCssProperty("textAlign")}
+    ${applyCssProperty("lineHeight")}
+    ${applyCssProperty("margin")}
+    ${applyCssProperty("marginTop")}
+    ${applyCssProperty("marginBottom")}
+    ${applyCssProperty("marginLeft")}
+    ${applyCssProperty("marginRight")}
 `;
