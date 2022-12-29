@@ -29,8 +29,11 @@ export interface BoxProps {
   backdropFilter?: CSSProperties["backdropFilter"];
 
   // Positioning
-  top?: CSSProperties["top"];
   position?: CSSProperties["position"];
+  top?: CSSProperties["top"];
+  bottom?: CSSProperties["bottom"];
+  left?: CSSProperties["left"];
+  right?: CSSProperties["right"];
 
   // Miscellaneous
   zIndex?: CSSProperties["zIndex"];
@@ -72,6 +75,9 @@ export const Box = Styled.div<BoxProps>`
   
   // Positioning
   ${applyCssProperty("top")}
+  ${applyCssProperty("bottom")}
+  ${applyCssProperty("left")}
+  ${applyCssProperty("right")}
   ${applyCssProperty("position")}
   ${applyCssProperty("zIndex")}
   
