@@ -3,8 +3,9 @@ import { Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import { IParticlesProps } from "react-tsparticles";
 import * as R from "ramda";
+import { IParticles } from "../../components";
 
-export function useParticles(options?: IParticlesProps["options"]) {
+export function useParticles(options?: IParticlesProps["options"]): IParticles {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
   }, []);

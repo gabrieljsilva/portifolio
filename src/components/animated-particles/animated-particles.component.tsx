@@ -1,10 +1,13 @@
 import Particles, { IParticlesProps } from "react-tsparticles";
 import { Engine } from "tsparticles-engine";
 
-interface AnimatedParticlesProps {
-  componentId?: string;
+export interface IParticles {
   initializer: (engine: Engine) => Promise<void>;
   options: IParticlesProps["options"];
+}
+
+interface AnimatedParticlesProps extends IParticles {
+  componentId?: string;
 }
 
 export function AnimatedParticles({ componentId, options, initializer }: AnimatedParticlesProps) {
