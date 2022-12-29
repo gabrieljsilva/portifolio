@@ -3,49 +3,71 @@ import { applyCssProperty } from "../../utils";
 import { CSSProperties } from "react";
 
 export interface BoxProps {
+  // Dimensions
   width?: CSSProperties["width"];
   minWidth?: CSSProperties["minWidth"];
   maxWidth?: CSSProperties["maxWidth"];
   height?: CSSProperties["height"];
   minHeight?: CSSProperties["minHeight"];
   maxHeight?: CSSProperties["maxHeight"];
+
+  // Spacing
   padding?: CSSProperties["padding"];
   margin?: CSSProperties["margin"];
-  border?: CSSProperties["border"];
-  borderBottom?: CSSProperties["borderBottom"];
-  borderColor?: CSSProperties["borderColor"];
+
+  // Background
   backgroundColor?: CSSProperties["backgroundColor"];
   backgroundImage?: CSSProperties["backgroundImage"];
   backgroundRepeat?: CSSProperties["backgroundRepeat"];
   background?: CSSProperties["background"];
-  filter?: CSSProperties["filter"];
   backgroundPosition?: CSSProperties["backgroundPosition"];
   backgroundSize?: CSSProperties["backgroundSize"];
   backdropFilter?: CSSProperties["backdropFilter"];
-  position?: CSSProperties["position"];
-  zIndex?: CSSProperties["zIndex"];
+
+  // Positioning
   top?: CSSProperties["top"];
+  position?: CSSProperties["position"];
+
+  // Miscellaneous
+  zIndex?: CSSProperties["zIndex"];
+  filter?: CSSProperties["filter"];
+  border?: CSSProperties["border"];
+  borderBottom?: CSSProperties["borderBottom"];
+  borderColor?: CSSProperties["borderColor"];
+  display?: CSSProperties["display"];
 }
 
 export const Box = Styled.div<BoxProps>`
+  // Dimensions
   ${applyCssProperty("width")}
-  ${applyCssProperty("height")}
   ${applyCssProperty("minWidth")}
+  ${applyCssProperty("maxWidth")}
+  ${applyCssProperty("height")}
   ${applyCssProperty("minHeight")}
+  ${applyCssProperty("maxHeight")}
+  
+  // Spacing
   ${applyCssProperty("padding")}
   ${applyCssProperty("margin")}
-  ${applyCssProperty("border")}
-  ${applyCssProperty("borderBottom")}
-  ${applyCssProperty("borderColor")}
+  
+  // Background
   ${applyCssProperty("backgroundColor")}
   ${applyCssProperty("background")}
-  ${applyCssProperty("filter")}
   ${applyCssProperty("backgroundPosition")}
   ${applyCssProperty("backgroundSize")}
   ${applyCssProperty("backdropFilter")}
   ${applyCssProperty("backgroundImage")}
   ${applyCssProperty("backgroundRepeat")}
+  
+  // Positioning
   ${applyCssProperty("top")}
   ${applyCssProperty("position")}
   ${applyCssProperty("zIndex")}
+  
+  // Miscellaneous
+  ${applyCssProperty("border")}
+  ${applyCssProperty("borderBottom")}
+  ${applyCssProperty("borderColor")}
+  ${applyCssProperty("filter")}
+  ${applyCssProperty("display")}
 `;

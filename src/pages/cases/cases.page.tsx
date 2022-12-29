@@ -1,5 +1,5 @@
-import { useTheme } from "styled-components";
 import { Box, Text } from "../../components";
+import { useTheme } from "styled-components";
 
 export function CasesPage() {
   const theme = useTheme();
