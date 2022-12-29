@@ -1,7 +1,7 @@
 import Styled from "styled-components";
-import { Container } from "../../../flex/container.component";
+import { Box } from "../../../box";
 
-export const NavbarItemAnimatedContainer = Styled(Container)`
+export const NavbarItemAnimatedContainer = Styled(Box)`
     display: inline-block;
    
     &:after {

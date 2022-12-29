@@ -1,13 +1,12 @@
-import { Text } from "../../components";
-import { Container } from "../../components/flex/container.component";
 import { useTheme } from "styled-components";
+import { Box, Text } from "../../components";
 
 export function AboutPage() {
   const theme = useTheme();
 
   return (
-    <Container minHeight={theme.getRemainingScreenHeight()}>
+    <Box minHeight={theme.getRemainingScreenHeight()}>
       <Text variant={"title"}>About</Text>
-    </Container>
+    </Box>
   );
 }

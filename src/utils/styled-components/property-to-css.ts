@@ -1,10 +1,9 @@
-import { css, CSSObject } from "styled-components";
+import kebabCase from "kebab-case";
+import { CSSProperties } from "styled-components";
 
-export function propertyToCSS(property: keyof CSSObject, value: CSSObject[keyof CSSObject]) {
-  return (
-    value &&
-    css`
-      ${property}: ${value}
-    `
-  );
+export function applyCssProperty(property: keyof CSSProperties) {
+  return (props: any) => {
+    const value = props[property] as string | number;
+    return props[property] && `${kebabCase(property as string)}: ${value};`;
+  };
 }
