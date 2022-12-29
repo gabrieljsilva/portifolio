@@ -1,36 +1,30 @@
 import Lottie from "react-lottie-player";
 import programmingLottieAnimation from "../../assets/programming_computer.json";
-import { Box, Flex, Text } from "../../components";
+import { Box, Flex, FlexColumn, FlexRow, Text } from "../../components";
 
 export function HomePage() {
   return (
-    <Box>
-      <Flex>
-        <Box>
+    <Flex flex={1} justifyContent={"space-around"} alignItems={"flex-start"}>
+      <FlexRow marginTop={"2rem"} justifyContent={"center"} alignItems={"center"}>
+        <FlexColumn justifyContent={"center"}>
           <Text variant={"title"} color={"light"}>
             Hello, I&apos;m Gabriel Silva
           </Text>
           <Text variant={"thinTitle"} color={"light"}>
-            And I&apos;m a Backend Software Developer
+            Backend Software Developer
           </Text>
-        </Box>
-        <div>
-          <img
-            src={
-              "https://chefbob.com.br/wp-content/uploads/2021/05/2021-05-12-como-deixar-os-gatos-mais-tranquilos.jpg"
-            }
-            width={"400px"}
-            height={"300px"}
-          />
-          <Lottie
-            animationData={programmingLottieAnimation}
-            style={{
-              width: "800px",
-              height: "500px",
-            }}
-          />
-        </div>
-      </Flex>
-    </Box>
+        </FlexColumn>
+
+        <Lottie
+          animationData={programmingLottieAnimation}
+          play
+          loop
+          style={{
+            display: "flex",
+            width: "600px",
+          }}
+        />
+      </FlexRow>
+    </Flex>
   );
 }

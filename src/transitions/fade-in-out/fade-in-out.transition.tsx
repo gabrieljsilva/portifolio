@@ -8,6 +8,10 @@ interface FadeInOutTransitionProps {
 export function FadeInOutTransition({ children }: FadeInOutTransitionProps) {
   return (
     <motion.div
+      style={{
+        display: "flex",
+        flex: 1,
+      }}
       initial={{
         opacity: 0,
       }}
