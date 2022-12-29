@@ -7,7 +7,7 @@ import { FadeInOutTransition } from "../../transitions";
 export function PublicLayout() {
   const navbar = useNavbar(publicMenuItems);
   const particles = useParticles({
-    style: { position: "fixed", top: "0", maxWidth: "100vw" },
+    style: { position: "fixed", top: "0", maxWidth: "100vw", backdropFilter: "blur(1px)" },
   });
   const linearGradiantOpacity = "0.85";
   const linearGradientBackGround = `linear-gradient(345deg, rgba(38,30,30,${linearGradiantOpacity}) 0%, rgba(20,17,34,${linearGradiantOpacity}) 52%, rgba(75,0,84,${linearGradiantOpacity}) 100%)`;
