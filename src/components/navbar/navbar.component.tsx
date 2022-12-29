@@ -10,13 +10,7 @@ export function Navbar({ items }: NavbarProps) {
   const theme = useTheme();
 
   return (
-    <Flex
-      as={"header"}
-      width={"100%"}
-      height={theme.topBarNavigationHeight}
-      justifyContent={"center"}
-      alignItems={"center"}
-    >
+    <Flex width={"100%"} height={theme.topBarNavigationHeight} justifyContent={"center"} alignItems={"center"}>
       {items.map((item) => (
         <NavbarItem key={item.key} name={item.name} path={item.path} active={item.active} />
       ))}

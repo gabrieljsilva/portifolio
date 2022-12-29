@@ -1,14 +1,14 @@
-import { CSSProperties, ReactNode } from "react";
 import Styled from "styled-components";
+import { CSSProperties, ReactNode } from "react";
 
-type StyledContainerProps = CSSProperties & {
-  children?: ReactNode;
+type ContainerProps = Partial<CSSProperties> & {
+  children?: ReactNode | ReactNode[];
 };
 
-function StyledContainer({ children, ...css }: StyledContainerProps) {
-  return <div style={css}>{children}</div>;
-}
+export const StyledContainer = Styled.div<any>`
+    ${({ children, ...styles }) => ({ ...styles })}
+`;
 
-export const Container = Styled(StyledContainer).attrs(({ ...styles }) => {
-  return { style: styles };
-})``;
+export function Container({ children, ...styles }: ContainerProps) {
+  return <StyledContainer {...styles}>{children}</StyledContainer>;
+}
