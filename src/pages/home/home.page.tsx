@@ -1,6 +1,6 @@
 import Lottie from "react-lottie-player";
 import programmingLottieAnimation from "../../assets/programming_computer.json";
-import { Box, ButtonOutline, Flex, FlexColumn, FlexRow, Text } from "../../components";
+import { Box, ButtonOutline, Flex, FlexColumn, FlexRow, GlassedCard, Text } from "../../components";
 import { Link } from "react-router-dom";
 
 export function HomePage() {
@@ -29,29 +29,19 @@ export function HomePage() {
         </FlexRow>
       </Flex>
       <Flex padding={"0 7rem"} justifyContent={"space-around"}>
-        <FlexColumn
-          position={"relative"}
-          marginBottom={"5rem"}
-          padding={"2rem"}
-          justifyContent={"space-around"}
-          alignItems={"center"}
-          width={"100%"}
-          height={"10rem"}
-          background={"rgba(10, 10, 10, .50)"}
-          borderRadius={"8px"}
-        >
+        <GlassedCard justifyContent={"space-around"} marginBottom={"5rem"} width={"75%"} height={"10rem"}>
           <Text textAlign={"center"} color={"light"} variant={"body"}>
             I&apos;ve been a programmer for over <strong> 3 years </strong>and I have extensive experience in the
             Javascript ecosystem. I worked on several types of projects, mainly focused on <strong> Health </strong> and
             <strong> R&S. </strong>
           </Text>
 
-          <Box position={"absolute"} bottom={0}>
+          <FlexRow position={"absolute"} bottom={0}>
             <Link to={"/about"}>
               <ButtonOutline>More About Me</ButtonOutline>
             </Link>
-          </Box>
-        </FlexColumn>
+          </FlexRow>
+        </GlassedCard>
       </Flex>
     </FlexColumn>
   );

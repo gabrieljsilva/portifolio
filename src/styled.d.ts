@@ -23,6 +23,8 @@ export interface FontVariants {
   body: string;
   thinTitle: string;
   menuItem: string;
+  cardTitle: string;
+  cardBody: string;
 }
 
 export type FontWeights = Record<keyof FontVariants, string>;

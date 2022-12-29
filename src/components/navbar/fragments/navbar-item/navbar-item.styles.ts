@@ -1,5 +1,5 @@
 import Styled from "styled-components";
-import { Box } from "../../../box";
+import { Box } from "../../../box/box";
 
 export const NavbarItemAnimatedContainer = Styled(Box)`
     display: inline-block;

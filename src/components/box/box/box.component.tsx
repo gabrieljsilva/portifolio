@@ -1,5 +1,5 @@
 import Styled from "styled-components";
-import { applyCssProperty } from "../../utils";
+import { applyCssProperty } from "../../../utils";
 import { CSSProperties } from "react";
 
 export interface BoxProps {
