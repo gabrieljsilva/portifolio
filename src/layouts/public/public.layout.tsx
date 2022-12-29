@@ -1,8 +1,7 @@
-import { AnimatedParticles, Navbar } from "../../components";
+import { AnimatedParticles, Navbar, Box } from "../../components";
 import { Outlet } from "react-router-dom";
 import { useNavbar, useParticles } from "../../hooks";
 import { publicMenuItems } from "./domain";
-import { Container } from "../../components/flex/container.component";
 import { FadeInOutTransition } from "../../transitions";
 
 export function PublicLayout() {
@@ -14,19 +13,19 @@ export function PublicLayout() {
   });
 
   return (
-    <Container>
-      <Container position={"relative"} zIndex={2}>
+    <Box maxWidth={"100vw"}>
+      <Box position={"relative"} zIndex={2}>
         <Navbar {...navbar} />
         <Outlet />
-      </Container>
+      </Box>
 
-      <Container position={"relative"} zIndex={1}>
+      <Box position={"relative"} zIndex={1}>
         <FadeInOutTransition>
           <AnimatedParticles {...particles} />
         </FadeInOutTransition>
-      </Container>
+      </Box>
 
-      <Container
+      <Box
         zIndex={0}
         position={"fixed"}
         backgroundImage={`${linearGradientBackGround}, url(/portifolio/bg.jpg)`}
@@ -37,6 +36,6 @@ export function PublicLayout() {
         minHeight={"100vh"}
         top={"0"}
       />
-    </Container>
+    </Box>
   );
 }
