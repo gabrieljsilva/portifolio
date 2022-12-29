@@ -1,17 +1,9 @@
-import { useTheme } from "styled-components";
-import { Container } from "../../components/flex/container.component";
-import { useParticles } from "../../hooks";
-import { AnimatedParticles } from "../../components";
+import { Flex, Text } from "../../components";
 
 export function HomePage() {
-  const theme = useTheme();
-  const particles = useParticles({
-    style: { position: "fixed" },
-  });
-
   return (
-    <Container minHeight={theme.getRemainingScreenHeight()}>
-      <AnimatedParticles {...particles} />
-    </Container>
+    <Flex width={"100%"} justifyContent={"center"}>
+      <Text>Home</Text>
+    </Flex>
   );
 }
