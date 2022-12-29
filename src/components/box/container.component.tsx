@@ -40,6 +40,8 @@ export interface BoxProps {
   borderColor?: CSSProperties["borderColor"];
   display?: CSSProperties["display"];
   overflow?: CSSProperties["overflow"];
+  borderRadius?: CSSProperties["borderRadius"];
+  boxShadow?: CSSProperties["boxShadow"];
 }
 
 export const Box = Styled.div<BoxProps>`
@@ -79,4 +81,6 @@ export const Box = Styled.div<BoxProps>`
   ${applyCssProperty("borderColor")}
   ${applyCssProperty("filter")}
   ${applyCssProperty("display")}
+  ${applyCssProperty("borderRadius")}
+  ${applyCssProperty("boxShadow")}
 `;

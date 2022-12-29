@@ -13,6 +13,7 @@ interface TextProps {
   textShadow?: CSSProperties["textShadow"];
   boxShadow?: CSSProperties["boxShadow"];
   backgroundColor?: CSSProperties["backgroundColor"];
+  textAlign?: CSSProperties["textAlign"];
 }
 
 export const Text = Styled.h1<TextProps>`
@@ -24,4 +25,5 @@ export const Text = Styled.h1<TextProps>`
     ${applyCssProperty("textShadow")}
     ${applyCssProperty("boxShadow")}
     ${applyCssProperty("backgroundColor")}
+    ${applyCssProperty("textAlign")}
 `;
