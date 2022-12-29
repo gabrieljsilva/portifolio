@@ -12,6 +12,7 @@ export interface ContainerProps {
   borderColor?: string;
   backgroundColor?: string;
   background?: string;
+  filter?: string;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -27,4 +28,5 @@ export const Container = styled.div<ContainerProps>`
   border-color: ${({ borderColor }) => borderColor ?? "initial"};
   background-color: ${({ backgroundColor }) => backgroundColor ?? "initial"};
   background: ${({ background }) => background ?? "initial"};
+  filter: ${({ filter }) => filter ?? "initial"};
 `;
