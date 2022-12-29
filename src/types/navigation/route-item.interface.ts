@@ -4,4 +4,5 @@ export interface RouteItem {
   path: string;
   Layout: ElementType;
   Screen: ElementType;
+  Transition?: ElementType;
 }

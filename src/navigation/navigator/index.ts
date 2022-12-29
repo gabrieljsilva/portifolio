@@ -1,1 +1,1 @@
-export * from "./create-router-navigator";
+export * from "./browser-navigator";
