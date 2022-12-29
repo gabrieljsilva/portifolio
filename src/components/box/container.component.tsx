@@ -35,6 +35,7 @@ export interface BoxProps {
   borderBottom?: CSSProperties["borderBottom"];
   borderColor?: CSSProperties["borderColor"];
   display?: CSSProperties["display"];
+  overflow?: CSSProperties["overflow"];
 }
 
 export const Box = Styled.div<BoxProps>`
