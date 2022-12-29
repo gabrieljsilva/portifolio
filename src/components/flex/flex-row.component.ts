@@ -1,6 +1,6 @@
 import Styled from "styled-components";
-import { Flex, FlexProps } from "./flex.component";
+import { Flex } from "./flex.component";
 
-export const FlexRow = Styled(Flex)<Omit<FlexProps, "direction">>`
+export const FlexRow = Styled(Flex)`
   flex-direction: row
 `;
