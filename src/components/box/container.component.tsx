@@ -14,6 +14,10 @@ export interface BoxProps {
   // Spacing
   padding?: CSSProperties["padding"];
   margin?: CSSProperties["margin"];
+  marginTop?: CSSProperties["marginTop"];
+  marginBottom?: CSSProperties["marginBottom"];
+  marginLeft?: CSSProperties["marginLeft"];
+  marginRight?: CSSProperties["marginRight"];
 
   // Background
   backgroundColor?: CSSProperties["backgroundColor"];
@@ -50,6 +54,10 @@ export const Box = Styled.div<BoxProps>`
   // Spacing
   ${applyCssProperty("padding")}
   ${applyCssProperty("margin")}
+  ${applyCssProperty("marginTop")}
+  ${applyCssProperty("marginBottom")}
+  ${applyCssProperty("marginLeft")}
+  ${applyCssProperty("marginRight")}
   
   // Background
   ${applyCssProperty("backgroundColor")}

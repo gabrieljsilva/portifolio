@@ -1,5 +1,7 @@
 import Styled from "styled-components";
 import type { FontVariants, Palette } from "../../styled";
+import { CSSProperties } from "react";
+import { applyCssProperty } from "../../utils";
 
 const DEFAULT_FONT_SIZE = "2.5rem";
 const DEFAULT_FONT_WEIGHT = "500";
@@ -8,6 +10,9 @@ interface TextProps {
   variant?: keyof FontVariants;
   color?: keyof Palette;
   textDecoration?: string;
+  textShadow?: CSSProperties["textShadow"];
+  boxShadow?: CSSProperties["boxShadow"];
+  backgroundColor?: CSSProperties["backgroundColor"];
 }
 
 export const Text = Styled.h1<TextProps>`
@@ -16,4 +21,7 @@ export const Text = Styled.h1<TextProps>`
     font-weight: ${({ variant, theme }) => (variant ? theme.fontWeights[variant] : DEFAULT_FONT_WEIGHT)};
     text-decoration: ${({ textDecoration }) => textDecoration ?? "none"};
     font-family: ${({ variant, theme }) => (variant ? theme.fonts[variant] : "parent")};
+    ${applyCssProperty("textShadow")}
+    ${applyCssProperty("boxShadow")}
+    ${applyCssProperty("backgroundColor")}
 `;

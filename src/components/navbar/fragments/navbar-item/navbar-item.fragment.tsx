@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-import { useTheme } from "styled-components";
 import { Flex } from "../../../flex";
 import { Text } from "../../../text";
 import { ButtonLink } from "../../../button";
-import * as S from "./navbar-item.styles";
 
 export interface NavbarItemProps {
   key: string;
@@ -13,17 +11,15 @@ export interface NavbarItemProps {
 }
 
 export function NavbarItem({ name, path, active }: NavbarItemProps) {
-  const theme = useTheme();
+  const activeStyle = "rgba(229,125,250,0.9) 0px 0px 20px";
 
   return (
     <Link to={path}>
       <Flex margin={"0px 8px"} padding={"8px 0"}>
         <ButtonLink>
-          <S.NavbarItemAnimatedContainer borderBottom={active ? `1px solid ${theme.colors.primary.main}` : undefined}>
-            <Text color={"light"} variant={"menuItem"}>
-              {name}
-            </Text>
-          </S.NavbarItemAnimatedContainer>
+          <Text textShadow={active ? activeStyle : undefined} color={"light"} variant={"menuItem"}>
+            {name}
+          </Text>
         </ButtonLink>
       </Flex>
     </Link>

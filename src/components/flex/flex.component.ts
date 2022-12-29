@@ -6,6 +6,7 @@ interface FlexComponentProps extends BoxProps {
   flexDirection?: CSSProperties["flexDirection"];
   justifyContent?: CSSProperties["justifyContent"];
   alignItems?: CSSProperties["alignItems"];
+  flex?: CSSProperties["flex"];
 }
 
 export const Flex = Styled(Box)<FlexComponentProps>`
@@ -13,4 +14,5 @@ export const Flex = Styled(Box)<FlexComponentProps>`
     ${applyCssProperty("flexDirection")}
     ${applyCssProperty("justifyContent")}
     ${applyCssProperty("alignItems")}
+    ${applyCssProperty("flex")}
 `;
