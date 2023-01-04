@@ -1,6 +1,6 @@
 import Lottie from "react-lottie-player";
 import programmingLottieAnimation from "../../assets/programming_computer.json";
-import { Box, ButtonOutline, Flex, FlexColumn, FlexRow, GlassedCard, Text } from "../../components";
+import { ButtonOutline, Flex, FlexColumn, FlexRow, GlassedCard, Text } from "../../components";
 import { Link } from "react-router-dom";
 
 export function HomePage() {

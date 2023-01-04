@@ -18,6 +18,7 @@ export interface BoxProps {
   marginBottom?: CSSProperties["marginBottom"];
   marginLeft?: CSSProperties["marginLeft"];
   marginRight?: CSSProperties["marginRight"];
+  gap?: CSSProperties["gap"];
 
   // Background
   backgroundColor?: CSSProperties["backgroundColor"];
@@ -63,6 +64,7 @@ export const Box = Styled.div<BoxProps>`
   ${applyCssProperty("marginBottom")}
   ${applyCssProperty("marginLeft")}
   ${applyCssProperty("marginRight")}
+  ${applyCssProperty("gap")}
   
   // Background
   ${applyCssProperty("backgroundColor")}

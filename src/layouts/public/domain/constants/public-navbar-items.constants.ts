@@ -1,4 +1,4 @@
-import { NavbarItemProps } from "../../../../components/navbar/fragments/navbar-item";
+import { NavbarItemProps } from "../../../../components/navbar/fragments";
 
 export const publicMenuItems: Array<Omit<NavbarItemProps, "active">> = [
   {
@@ -8,7 +8,7 @@ export const publicMenuItems: Array<Omit<NavbarItemProps, "active">> = [
   },
   {
     key: "ABOUT",
-    name: "About",
+    name: "About me",
     path: "/about",
   },
   {
