@@ -9,6 +9,7 @@ export function AboutPage() {
     <FlexRow
       width={"100%"}
       justifyContent={"space-between"}
+      alignItems={"center"}
       margin={"0 2rem"}
       gap={"1rem"}
       minHeight={theme.getRemainingScreenHeight()}
