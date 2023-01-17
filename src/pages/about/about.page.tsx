@@ -1,7 +1,7 @@
 import { useTheme } from "styled-components";
-import { ButtonOutline, GlassedCard } from "../../components";
 import { Link } from "react-router-dom";
 import { Button, Grid, Stack, Typography } from "@mui/material";
+import { GlassedCard } from "../../components";
 
 export function AboutPage() {
   const theme = useTheme();
@@ -73,7 +73,6 @@ export function AboutPage() {
             Since then I have been providing services to other companies using technologies from the Javascript
             Ecosystem
           </Typography>
-
           <Stack flexDirection={"column-reverse"} flex={1}>
             <Link to={"/cases"}>
               <Button variant={"outlined"}>See more cases</Button>
