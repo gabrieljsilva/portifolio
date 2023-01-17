@@ -1,5 +1,4 @@
 import { NavbarItem, NavbarItemProps } from "./fragments";
-import { useTheme } from "styled-components";
 import { Stack } from "@mui/material";
 
 interface NavbarProps {
@@ -7,13 +6,13 @@ interface NavbarProps {
 }
 
 export function Navbar({ items }: NavbarProps) {
-  const theme = useTheme();
+  const topBarNavigationHeight = "3.5em";
 
   return (
     <Stack
       direction={"row"}
       width={"100%"}
-      height={theme.topBarNavigationHeight}
+      height={topBarNavigationHeight}
       justifyContent={"center"}
       alignItems={"center"}
     >

@@ -28,6 +28,13 @@ export const muiDarkTheme = createTheme({
     },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        a: {
+          textDecoration: "none",
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         text: {

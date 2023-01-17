@@ -1,7 +1,4 @@
-import { GlobalStyles } from "./theme/styled-components";
-import { ThemeProvider } from "styled-components";
-import { ThemeProvider as MuiThemeProvider } from "@mui/material";
-import { mainTheme } from "./theme/styled-components/themes";
+import { CssBaseline, ThemeProvider as MuiThemeProvider } from "@mui/material";
 import { BrowserNavigator } from "./navigation";
 import { muiDarkTheme } from "./theme/material-ui";
 import "@fontsource/roboto/100.css";
@@ -21,10 +18,9 @@ import "@fontsource/nunito/900.css";
 export function App() {
   return (
     <MuiThemeProvider theme={muiDarkTheme}>
-      <ThemeProvider theme={mainTheme}>
-        <GlobalStyles />
+      <CssBaseline>
         <BrowserNavigator />
-      </ThemeProvider>
+      </CssBaseline>
     </MuiThemeProvider>
   );
 }
