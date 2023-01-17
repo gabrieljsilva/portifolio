@@ -1,15 +1,23 @@
+import { Box, Grid, Stack, Typography, useTheme } from "@mui/material";
 import Lottie from "react-lottie-player";
 import programmingLottieAnimation from "../../assets/programming_computer.json";
-import { ButtonOutline, Row, FlexRow, GlassedCard } from "../../components";
+import { ButtonOutline, GlassedCard } from "../../components";
 import { Link } from "react-router-dom";
-import { Stack, Typography } from "@mui/material";
 
 export function HomePage() {
+  const theme = useTheme();
+
   return (
     <Stack width={"100%"} padding={"0 2rem"}>
-      <Row flex={1} justifyContent={"space-between"} alignItems={"flex-start"} width={"100%"}>
-        <FlexRow marginTop={"1rem"} justifyContent={"center"} alignItems={"center"} width={"100%"}>
-          <Stack justifyContent={"center"}>
+      <Grid container alignItems={"center"}>
+        <Grid item flex={1}>
+          <Stack
+            sx={{
+              [theme.breakpoints.down("lg")]: {
+                alignItems: "center",
+              },
+            }}
+          >
             <Typography variant={"h1"} color={"white"}>
               Hello, I&apos;m Gabriel Silva
             </Typography>
@@ -17,19 +25,29 @@ export function HomePage() {
               Backend Software Developer
             </Typography>
           </Stack>
-
+        </Grid>
+        <Grid
+          item
+          justifySelf={"flex-end"}
+          sx={{
+            [theme.breakpoints.down("lg")]: {
+              display: "none",
+            },
+          }}
+        >
           <Lottie
             animationData={programmingLottieAnimation}
             play
             loop
             style={{
               display: "flex",
-              height: "20%",
+              height: "100%",
             }}
           />
-        </FlexRow>
-      </Row>
-      <Row padding={"0 7rem"} justifyContent={"space-around"}>
+        </Grid>
+      </Grid>
+
+      <Box padding={"0 7rem"}>
         <GlassedCard>
           <Stack alignItems={"center"} gap={5}>
             <Typography textAlign={"center"} color={"white"} variant={"body1"}>
@@ -44,7 +62,7 @@ export function HomePage() {
             </Link>
           </Stack>
         </GlassedCard>
-      </Row>
+      </Box>
     </Stack>
   );
 }
