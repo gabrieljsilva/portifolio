@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Flex } from "../../../flex";
+import { Row } from "../../../flex";
 import { Text } from "../../../text";
 import { ButtonLink } from "../../../button";
 
@@ -15,13 +15,13 @@ export function NavbarItem({ name, path, active }: NavbarItemProps) {
 
   return (
     <Link to={path}>
-      <Flex margin={"0px 8px"} padding={"8px 0"}>
+      <Row margin={"0px 8px"} padding={"8px 0"}>
         <ButtonLink>
           <Text textShadow={active ? activeStyle : undefined} color={"light"} variant={"menuItem"}>
             {name}
           </Text>
         </ButtonLink>
-      </Flex>
+      </Row>
     </Link>
   );
 }

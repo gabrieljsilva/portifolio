@@ -1,5 +1,5 @@
 import { useTheme } from "styled-components";
-import { ButtonOutline, Flex, FlexRow, GlassedCard, Text } from "../../components";
+import { ButtonOutline, Row, FlexRow, GlassedCard, Text } from "../../components";
 import { Link } from "react-router-dom";
 
 export function AboutPage() {
@@ -53,11 +53,11 @@ export function AboutPage() {
             Ecosystem
           </Text>
 
-          <Flex flexDirection={"column-reverse"} flex={1}>
+          <Row flexDirection={"column-reverse"} flex={1}>
             <Link to={"/cases"}>
               <ButtonOutline>See more cases</ButtonOutline>
             </Link>
-          </Flex>
+          </Row>
         </GlassedCard>
       </div>
     </FlexRow>

@@ -1,4 +1,4 @@
-import { Flex } from "../flex";
+import { Row } from "../flex";
 import { NavbarItem, NavbarItemProps } from "./fragments";
 import { useTheme } from "styled-components";
 
@@ -10,10 +10,10 @@ export function Navbar({ items }: NavbarProps) {
   const theme = useTheme();
 
   return (
-    <Flex width={"100%"} height={theme.topBarNavigationHeight} justifyContent={"center"} alignItems={"center"}>
+    <Row width={"100%"} height={theme.topBarNavigationHeight} justifyContent={"center"} alignItems={"center"}>
       {items.map((item) => (
         <NavbarItem key={item.key} name={item.name} path={item.path} active={item.active} />
       ))}
-    </Flex>
+    </Row>
   );
 }

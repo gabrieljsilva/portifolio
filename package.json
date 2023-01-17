@@ -10,6 +10,11 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/nunito": "^4.5.11",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/material": "^5.11.4",
     "framer-motion": "^8.0.2",
     "kebab-case": "^1.0.2",
     "lottie-react": "^2.3.1",

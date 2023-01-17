@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
-import { AnimatedParticles, Navbar, Box, FlexColumn, Flex } from "../../components";
+import { AnimatedParticles, Navbar, Box, Row } from "../../components";
 import { useNavbar, useParticles } from "../../hooks";
 import { publicMenuItems } from "./domain";
 import { FadeInOutTransition } from "../../transitions";
+import { Stack } from "@mui/material";
 
 export function PublicLayout() {
   const navbar = useNavbar(publicMenuItems);
@@ -13,13 +14,13 @@ export function PublicLayout() {
   const linearGradientBackGround = `linear-gradient(345deg, rgba(38,30,30,${linearGradiantOpacity}) 0%, rgba(20,17,34,${linearGradiantOpacity}) 52%, rgba(75,0,84,${linearGradiantOpacity}) 100%)`;
 
   return (
-    <FlexColumn minHeight={"100vh"}>
-      <Flex justifyContent={"center"}>
-        <FlexColumn width={"100%"} maxWidth={"1920px"} position={"relative"} zIndex={2}>
+    <Stack minHeight={"100vh"}>
+      <Row justifyContent={"center"}>
+        <Stack width={"100%"} maxWidth={"1920px"} position={"relative"} zIndex={2}>
           <Navbar {...navbar} />
           <Outlet />
-        </FlexColumn>
-      </Flex>
+        </Stack>
+      </Row>
 
       <Box position={"relative"} zIndex={1}>
         <FadeInOutTransition>
@@ -38,6 +39,6 @@ export function PublicLayout() {
         minHeight={"100vh"}
         top={"0"}
       />
-    </FlexColumn>
+    </Stack>
   );
 }
