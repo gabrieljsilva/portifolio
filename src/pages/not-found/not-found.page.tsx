@@ -1,11 +1,11 @@
-import { Flex, Text } from "../../components";
+import { Stack, Typography } from "@mui/material";
 
 export function NotFoundPage() {
   return (
-    <Flex width={"100%"} height={"100vh"} justifyContent={"center"} alignItems={"center"}>
-      <Text aria-label={"not-found-message"} variant={"thinTitle"}>
+    <Stack width={"100%"} height={"100vh"} justifyContent={"center"} alignItems={"center"}>
+      <Typography aria-label={"not-found-message"} variant={"subtitle1"}>
         PAGE NOT FOUND
-      </Text>
-    </Flex>
+      </Typography>
+    </Stack>
   );
 }

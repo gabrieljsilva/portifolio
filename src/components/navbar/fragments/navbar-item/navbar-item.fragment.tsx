@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import { Flex } from "../../../flex";
-import { Text } from "../../../text";
-import { ButtonLink } from "../../../button";
+import { Button, Stack, Typography } from "@mui/material";
 
 export interface NavbarItemProps {
   key: string;
@@ -15,13 +13,18 @@ export function NavbarItem({ name, path, active }: NavbarItemProps) {
 
   return (
     <Link to={path}>
-      <Flex margin={"0px 8px"} padding={"8px 0"}>
-        <ButtonLink>
-          <Text textShadow={active ? activeStyle : undefined} color={"light"} variant={"menuItem"}>
+      <Stack margin={"0px 8px"} padding={"8px 0"}>
+        <Button variant={"text"}>
+          <Typography
+            sx={{ textShadow: active ? activeStyle : undefined }}
+            color={"white"}
+            fontFamily={"Nunito"}
+            fontWeight={"900"}
+          >
             {name}
-          </Text>
-        </ButtonLink>
-      </Flex>
+          </Typography>
+        </Button>
+      </Stack>
     </Link>
   );
 }
