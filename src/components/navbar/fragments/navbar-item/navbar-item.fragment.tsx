@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import { Row } from "../../../flex";
 import { Text } from "../../../text";
-import { ButtonLink } from "../../../button";
+import { Button, Stack } from "@mui/material";
 
 export interface NavbarItemProps {
   key: string;
@@ -15,13 +14,13 @@ export function NavbarItem({ name, path, active }: NavbarItemProps) {
 
   return (
     <Link to={path}>
-      <Row margin={"0px 8px"} padding={"8px 0"}>
-        <ButtonLink>
+      <Stack margin={"0px 8px"} padding={"8px 0"}>
+        <Button variant={"text"}>
           <Text textShadow={active ? activeStyle : undefined} color={"light"} variant={"menuItem"}>
             {name}
           </Text>
-        </ButtonLink>
-      </Row>
+        </Button>
+      </Stack>
     </Link>
   );
 }

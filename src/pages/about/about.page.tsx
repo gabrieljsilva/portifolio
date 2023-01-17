@@ -1,19 +1,10 @@
-import { useTheme } from "styled-components";
 import { Link } from "react-router-dom";
 import { Button, Grid, Stack, Typography } from "@mui/material";
 import { GlassedCard } from "../../components";
 
 export function AboutPage() {
-  const theme = useTheme();
-
   return (
-    <Grid
-      container
-      gap={"1rem"}
-      alignItems={"center"}
-      justifyContent={"space-around"}
-      minHeight={theme.getRemainingScreenHeight()}
-    >
+    <Grid container gap={"1rem"} alignItems={"center"} justifyContent={"space-around"}>
       <Grid item>
         <GlassedCard maxWidth={"20rem"} width={"100%"} height={"20rem"}>
           <Typography

@@ -1,11 +1,9 @@
-import { useTheme } from "styled-components";
 import { GlassedCard } from "../../components";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 
 export function SkillsPage() {
-  const theme = useTheme();
   return (
-    <Box minHeight={theme.getRemainingScreenHeight()}>
+    <Box>
       <Grid container gap={"1rem"} justifyContent={"center"}>
         <Grid item>
           <GlassedCard width={"20rem"} height={"15rem"}>

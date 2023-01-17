@@ -27,4 +27,21 @@ export const muiDarkTheme = createTheme({
       fontFamily: "Nunito",
     },
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        text: {
+          textTransform: "none",
+          ":hover": {
+            backgroundColor: "transparent",
+          },
+        },
+        outlined: {
+          ":hover": {
+            boxShadow: "0px 0px 20px",
+          },
+        },
+      },
+    },
+  },
 });
