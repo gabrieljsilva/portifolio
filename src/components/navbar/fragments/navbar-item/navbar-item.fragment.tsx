@@ -15,7 +15,12 @@ export function NavbarItem({ name, path, active }: NavbarItemProps) {
     <Link to={path}>
       <Stack margin={"0px 8px"} padding={"8px 0"}>
         <Button variant={"text"}>
-          <Typography sx={{ textShadow: active ? activeStyle : undefined }} color={"white"}>
+          <Typography
+            sx={{ textShadow: active ? activeStyle : undefined }}
+            color={"white"}
+            fontFamily={"Nunito"}
+            fontWeight={"900"}
+          >
             {name}
           </Typography>
         </Button>

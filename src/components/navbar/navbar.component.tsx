@@ -1,18 +1,18 @@
 import { NavbarItem, NavbarItemProps } from "./fragments";
 import { Stack } from "@mui/material";
+import { NAVBAR_HEIGHT } from "../../constants";
 
 interface NavbarProps {
   items: NavbarItemProps[];
 }
 
 export function Navbar({ items }: NavbarProps) {
-  const topBarNavigationHeight = "3.5em";
-
   return (
     <Stack
       direction={"row"}
       width={"100%"}
-      height={topBarNavigationHeight}
+      height={NAVBAR_HEIGHT}
+      marginBottom={NAVBAR_HEIGHT}
       justifyContent={"center"}
       alignItems={"center"}
     >
