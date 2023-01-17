@@ -1,7 +1,7 @@
-import { Box, Grid, Stack, Typography, useTheme } from "@mui/material";
+import { Box, Button, Grid, Stack, Typography, useTheme } from "@mui/material";
 import Lottie from "react-lottie-player";
 import programmingLottieAnimation from "../../assets/programming_computer.json";
-import { ButtonOutline, GlassedCard } from "../../components";
+import { GlassedCard } from "../../components";
 import { Link } from "react-router-dom";
 
 export function HomePage() {
@@ -58,7 +58,7 @@ export function HomePage() {
             </Typography>
 
             <Link to={"/about"}>
-              <ButtonOutline>More About Me</ButtonOutline>
+              <Button variant={"outlined"}>See more cases</Button>
             </Link>
           </Stack>
         </GlassedCard>
