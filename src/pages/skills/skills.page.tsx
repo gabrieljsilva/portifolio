@@ -1,4 +1,4 @@
-import { GlassedCard } from "../../components";
+import { GlassedContainer } from "../../components";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 
 export function SkillsPage() {
@@ -6,7 +6,7 @@ export function SkillsPage() {
     <Box>
       <Grid container gap={"1rem"} justifyContent={"center"}>
         <Grid item>
-          <GlassedCard width={"20rem"} height={"15rem"}>
+          <GlassedContainer width={"20rem"} height={"15rem"}>
             <Stack direction={"row"} alignItems={"center"} justifyContent={"space-around"} width={"100%"}>
               <Typography
                 textAlign={"center"}
@@ -23,10 +23,10 @@ export function SkillsPage() {
               Javascript is my main language since I started my professional career as a programmer. I have extensive
               experience in your ecosystem both front-end and back-end.
             </Typography>
-          </GlassedCard>
+          </GlassedContainer>
         </Grid>
         <Grid item>
-          <GlassedCard width={"20rem"} height={"15rem"}>
+          <GlassedContainer width={"20rem"} height={"15rem"}>
             <Stack direction={"row"} alignItems={"center"} justifyContent={"space-around"} width={"100%"}>
               <Typography
                 textAlign={"center"}
@@ -43,10 +43,10 @@ export function SkillsPage() {
               Node.js is the main technology I use for backend development. I have been working professionally with this
               technology since 2019 for the development of APIs and SSR applications.
             </Typography>
-          </GlassedCard>
+          </GlassedContainer>
         </Grid>
         <Grid item>
-          <GlassedCard width={"20rem"} height={"15rem"}>
+          <GlassedContainer width={"20rem"} height={"15rem"}>
             <Stack direction={"row"} alignItems={"center"} justifyContent={"space-around"} width={"100%"}>
               <Typography
                 textAlign={"center"}
@@ -63,10 +63,10 @@ export function SkillsPage() {
               I&apos;ve been using React.js for 2 years now for UI development (like this one). Despite being primarily
               a Backend developer, I still have some experience with React.js.
             </Typography>
-          </GlassedCard>
+          </GlassedContainer>
         </Grid>
         <Grid item>
-          <GlassedCard width={"20rem"} height={"15rem"}>
+          <GlassedContainer width={"20rem"} height={"15rem"}>
             <Stack direction={"row"} alignItems={"center"} justifyContent={"space-around"} width={"100%"}>
               <Typography
                 textAlign={"center"}
@@ -83,10 +83,10 @@ export function SkillsPage() {
               I adopted Typescript about 3 years ago when I saw some colleagues using it in some projects and I decided
               to test it too. I currently use it professionally in Backend and Frontend projects.
             </Typography>
-          </GlassedCard>
+          </GlassedContainer>
         </Grid>
         <Grid item>
-          <GlassedCard width={"20rem"} height={"15rem"}>
+          <GlassedContainer width={"20rem"} height={"15rem"}>
             <Stack direction={"row"} alignItems={"center"} justifyContent={"space-around"} width={"100%"}>
               <Typography
                 textAlign={"center"}
@@ -104,10 +104,10 @@ export function SkillsPage() {
               colleagues when they showed me the ease of uploading development environments quickly and soon I started
               to study and use it in my own personal and professional projects.
             </Typography>
-          </GlassedCard>
+          </GlassedContainer>
         </Grid>
         <Grid item>
-          <GlassedCard width={"20rem"} height={"15rem"}>
+          <GlassedContainer width={"20rem"} height={"15rem"}>
             <Stack direction={"row"} alignItems={"center"} justifyContent={"space-around"} width={"100%"}>
               <Typography
                 textAlign={"center"}
@@ -125,7 +125,7 @@ export function SkillsPage() {
               big project and the characteristics matched the GraphQL proposal and we used it as a pilot project (and it
               was a success) since then I&apos;ve been using it in projects that seem to be convenient.
             </Typography>
-          </GlassedCard>
+          </GlassedContainer>
         </Grid>
       </Grid>
     </Box>

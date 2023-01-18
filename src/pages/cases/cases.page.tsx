@@ -1,4 +1,4 @@
-import { GlassedCard } from "../../components";
+import { GlassedContainer } from "../../components";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 
 export function CasesPage() {
@@ -6,7 +6,7 @@ export function CasesPage() {
     <Box width={"100%"}>
       <Grid container gap={"1rem"} justifyContent={"center"} alignItems={"center"}>
         <Grid item>
-          <GlassedCard width={"20rem"} height={"15rem"}>
+          <GlassedContainer width={"20rem"} height={"15rem"}>
             <Stack alignItems={"center"} justifyContent={"space-around"} width={"100%"}>
               <Typography
                 textAlign={"center"}
@@ -16,7 +16,7 @@ export function CasesPage() {
                 fontWeight={"600"}
                 color={"white"}
               >
-                Takaoka Anestesia
+                Takaoka Demand To Invoice
               </Typography>
             </Stack>
             <Typography textAlign={"center"} color={"white"} variant={"body1"} lineHeight={"1.5rem"}>
@@ -24,11 +24,11 @@ export function CasesPage() {
               surgeons. The project developed was a system of medical scales, from registration, through patient care to
               payment.
             </Typography>
-          </GlassedCard>
+          </GlassedContainer>
         </Grid>
 
         <Grid item>
-          <GlassedCard width={"20rem"} height={"15rem"}>
+          <GlassedContainer width={"20rem"} height={"15rem"}>
             <Stack alignItems={"center"} justifyContent={"space-around"} width={"100%"}>
               <Typography
                 textAlign={"center"}
@@ -47,11 +47,11 @@ export function CasesPage() {
               doctors in the Fleury network. The objective was to facilitate the negotiation of scales between the
               doctors.
             </Typography>
-          </GlassedCard>
+          </GlassedContainer>
         </Grid>
 
         <Grid item>
-          <GlassedCard width={"20rem"} height={"15rem"}>
+          <GlassedContainer width={"20rem"} height={"15rem"}>
             <Stack alignItems={"center"} justifyContent={"space-around"} width={"100%"}>
               <Typography
                 textAlign={"center"}
@@ -69,7 +69,7 @@ export function CasesPage() {
               are GoHealth-NPS. This product aimed to evaluate the satisfaction and chances of promotion by the patients
               of our clients.
             </Typography>
-          </GlassedCard>
+          </GlassedContainer>
         </Grid>
       </Grid>
     </Box>
