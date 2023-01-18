@@ -74,7 +74,7 @@ export function AboutPage() {
               variant={"h1"}
               color={"white"}
             >
-              When did I start programming?
+              Educational Background
             </Typography>
             <Typography textAlign={"center"} color={"white"} variant={"body2"} lineHeight={"1.5rem"}>
               I&apos;ve been a developer since<strong> 2018 </strong>, when I joined a technical course in
