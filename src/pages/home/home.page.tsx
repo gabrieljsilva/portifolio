@@ -67,7 +67,7 @@ export function HomePage() {
         <GlassedContainer>
           <Stack alignItems={"center"} gap={5}>
             <Typography textAlign={"center"} color={"white"} variant={"body1"}>
-              Hello!!! My name is <strong> Gabriel de Jesus Silva </strong>.I&apos;ve been a programmer for over
+              Hello!!! My name is <strong> Gabriel de Jesus Silva</strong>. I&apos;ve been a programmer for over
               <strong> {totalExperienceYears} years </strong>. I have extensive experience in the{" "}
               <strong> Javascript </strong> ecosystem. I worked on several types of projects, mainly focused on{" "}
               <strong> Health </strong> and
