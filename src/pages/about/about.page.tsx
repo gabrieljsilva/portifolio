@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import { Avatar, Box, Button, Grid, Stack, Typography, useTheme } from "@mui/material";
+import { differenceInYears } from "date-fns";
 import { GlassedContainer } from "../../components";
 
 export function AboutPage() {
   const theme = useTheme();
   const avatarSize = "12rem";
+  const myBirthDate = new Date("2000-01-23");
+  const myAge = differenceInYears(new Date(Date.now()), myBirthDate);
 
   return (
     <Box p={2} width={"100%"}>
@@ -51,8 +54,10 @@ export function AboutPage() {
                 },
               }}
             >
-              My name is Gabriel de Jesus Silva, I&apos;m 22 years old and I&apos;m from Salvador, Bahia, Brazil, I
-              currently live in the interior of the state of Bahia, in the city of Senhor do Bonfim.
+              My name is <strong>Gabriel de Jesus Silva</strong>, I&apos;m <strong> {myAge} years old </strong>and
+              I&apos;m from <strong>Salvador, Bahia, Brazil </strong>, I currently live in the interior of the state of
+              <strong> Bahia</strong>, in the city of
+              <strong> Senhor do Bonfim </strong>.
             </Typography>
           </Grid>
         </Grid>
@@ -72,10 +77,12 @@ export function AboutPage() {
               When did I start programming?
             </Typography>
             <Typography textAlign={"center"} color={"white"} variant={"body2"} lineHeight={"1.5rem"}>
-              I&apos;ve been a developer since 2018, when I joined a technical course in computer science at the
-              Instituto Federal de Educação, Ciência e Tecnologia, which I graduated in 2019. <br />
-              In the same year I also joined the higher course in Computer Science in the same institute and completed 4
-              semesters.
+              I&apos;ve been a developer since<strong> 2018 </strong>, when I joined a technical course in
+              <strong> Computer science </strong> at the
+              <strong> Instituto Federal de Educação, Ciência e Tecnologia</strong>, which I graduated in
+              <strong> 2019</strong>. <br />
+              In the same year I also started my graduation in <strong> Computer Science </strong> in the same institute
+              and completed 4 semesters of 8.
             </Typography>
           </GlassedContainer>
         </Grid>
@@ -90,19 +97,20 @@ export function AboutPage() {
               variant={"h1"}
               color={"white"}
             >
-              My first professional experiences
+              Experiences
             </Typography>
             <Typography textAlign={"center"} color={"white"} variant={"body2"} lineHeight={"1.5rem"}>
-              My first professional experience was at the end of 2018, when I did an internship at a company called
-              Newtic. During this period I learned to create APIs with Node.js.
+              My first professional experience was at the end of <strong> 2018 </strong>, when I did an internship at a
+              company called <strong>Newtic </strong>. During this period I learned to create APIs with
+              <strong> Node.js </strong> and user interface with <strong>Vue.js </strong>.
             </Typography>
             <Typography textAlign={"center"} color={"white"} variant={"body2"} lineHeight={"1.5rem"}>
-              Since then I have been providing services to other companies using technologies from the Javascript
-              Ecosystem
+              Since then I have been providing services to other companies using technologies from the
+              <strong> Javascript Ecosystem </strong>
             </Typography>
             <Stack mt={6} width={"100%"} alignItems={"center"}>
               <Link to={"/cases"}>
-                <Button variant={"outlined"}>See more cases</Button>
+                <Button variant={"outlined"}>see all my experiences</Button>
               </Link>
             </Stack>
           </GlassedContainer>
