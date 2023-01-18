@@ -1,11 +1,14 @@
 import { Box, Button, Grid, Stack, Typography, useTheme } from "@mui/material";
 import Lottie from "react-lottie-player";
-import programmingLottieAnimation from "../../assets/programming_computer.json";
-import { GlassedContainer } from "../../components";
 import { Link } from "react-router-dom";
+import { differenceInYears } from "date-fns";
+import { GlassedContainer } from "../../components";
+import programmingLottieAnimation from "../../assets/programming_computer.json";
 
 export function HomePage() {
   const theme = useTheme();
+  const startProgrammingDate = new Date("2019-07-01");
+  const totalExperienceYears = differenceInYears(new Date(Date.now()), startProgrammingDate);
 
   return (
     <Stack width={"100%"} flex={1} px={"2rem"} pb={"5rem"}>
@@ -64,9 +67,10 @@ export function HomePage() {
         <GlassedContainer>
           <Stack alignItems={"center"} gap={5}>
             <Typography textAlign={"center"} color={"white"} variant={"body1"}>
-              I&apos;ve been a programmer for over <strong> 3 years </strong>and I have extensive experience in the
-              Javascript ecosystem. I worked on several types of projects, mainly focused on <strong> Health </strong>{" "}
-              and
+              Hello!!! My name is <strong> Gabriel de Jesus Silva </strong>.I&apos;ve been a programmer for over
+              <strong> {totalExperienceYears} years </strong>. I have extensive experience in the{" "}
+              <strong> Javascript </strong> ecosystem. I worked on several types of projects, mainly focused on{" "}
+              <strong> Health </strong> and
               <strong> R&S. </strong>
             </Typography>
 

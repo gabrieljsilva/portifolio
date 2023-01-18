@@ -7,6 +7,6 @@ export const GlassedContainer = Styled(Stack)`
   border-radius: 8px;
   &:hover {
     background: rgba(10, 10, 10, .85);
-    transition: 0.5s;
+    transition: 0.75s;
   }
 `;
