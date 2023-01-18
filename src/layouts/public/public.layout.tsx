@@ -18,8 +18,8 @@ export function PublicLayout() {
 
   return (
     <Stack minHeight={"100vh"}>
-      <Stack justifyContent={"center"}>
-        <Stack width={"100%"} maxWidth={"1920px"} position={"relative"} zIndex={2}>
+      <Stack alignItems={"center"} flex={1}>
+        <Stack flex={1} width={"100%"} maxWidth={"1920px"} position={"relative"} zIndex={2}>
           <Navbar {...navbar} />
           <Outlet />
         </Stack>
