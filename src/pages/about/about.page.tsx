@@ -106,7 +106,7 @@ export function AboutPage() {
             </Typography>
             <Typography textAlign={"center"} color={"white"} variant={"body2"} lineHeight={"1.5rem"}>
               Since then I have been providing services to other companies using technologies from the
-              <strong> Javascript Ecosystem </strong>
+              <strong> Javascript Ecosystem. </strong>
             </Typography>
             <Stack mt={6} width={"100%"} alignItems={"center"}>
               <Link to={"/cases"}>
