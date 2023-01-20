@@ -46,7 +46,7 @@ export function HomePage() {
               variant={"subtitle1"}
               color={"white"}
             >
-              Backend Software Developer
+              Fullstack Software Developer
             </Typography>
           </Stack>
         </Grid>
