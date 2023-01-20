@@ -9,7 +9,6 @@ const APP_PORT = 3000;
 
 export default defineConfig({
   plugins: [react()],
-  base: "portifolio",
   test: {
     globals: true,
     environment: "jsdom",

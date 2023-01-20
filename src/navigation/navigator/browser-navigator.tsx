@@ -3,7 +3,7 @@ import { AnimatedRoutes } from "./animated-routes";
 
 export function BrowserNavigator() {
   return (
-    <BrowserRouter basename={"portifolio"}>
+    <BrowserRouter>
       <AnimatedRoutes />
     </BrowserRouter>
   );
