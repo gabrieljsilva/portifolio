@@ -4,6 +4,7 @@ import { useNavbar, useParticles } from "../../hooks";
 import { publicMenuItems } from "./domain";
 import { FadeInOutTransition } from "../../transitions";
 import { Stack, Box } from "@mui/material";
+import backgroundImage from "../../../public/bg.jpg";
 
 export function PublicLayout() {
   const navbar = useNavbar(publicMenuItems);
@@ -38,7 +39,7 @@ export function PublicLayout() {
         minHeight={"100vh"}
         top={"0"}
         sx={{
-          backgroundImage: `${linearGradientBackGround}, url(/bg.jpg)`,
+          backgroundImage: `${linearGradientBackGround}, url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
