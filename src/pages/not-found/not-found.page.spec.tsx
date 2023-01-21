@@ -15,6 +15,6 @@ describe("Not Found Page Tests", () => {
     const message = await findByLabelText("not-found-message");
 
     expect(message).toBeDefined();
-    expect(message.innerHTML).toBe("PAGE NOT FOUND");
+    expect(message.innerHTML).toBe("PAGE NOT FOUNDD");
   });
 });
