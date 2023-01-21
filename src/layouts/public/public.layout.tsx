@@ -38,7 +38,7 @@ export function PublicLayout() {
         minHeight={"100vh"}
         top={"0"}
         sx={{
-          backgroundImage: `${linearGradientBackGround}, url(/portifolio/bg.jpg)`,
+          backgroundImage: `${linearGradientBackGround}, url(/bg.jpg)`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
