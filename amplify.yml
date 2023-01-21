@@ -10,6 +10,9 @@ frontend:
     test:
       commands:
         - yarn test
+    post_build:
+      commands:
+        - if [ $TEST_EXIT_CODE -ne 0 ]; then amplify-category rollback; fi
 
   artifacts:
     baseDirectory: /dist
