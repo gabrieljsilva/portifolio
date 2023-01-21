@@ -2,6 +2,7 @@ on:
   pull_request:
     branches:
       - dev
+      - master
 
   push:
     branches:
@@ -26,3 +27,9 @@ jobs:
 
       - name: Run tests
         run: yarn test
+
+      - name: Revert merge if fails
+        if: ${{ failure() }}
+        uses: yashdalfthegray/revert-pull-request-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
