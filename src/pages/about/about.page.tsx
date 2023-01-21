@@ -55,7 +55,7 @@ export function AboutPage() {
               }}
             >
               My name is <strong>Gabriel de Jesus Silva</strong>, I&apos;m <strong> {myAge} years old </strong>and
-              I&apos;m from <strong>Salvador, Bahia, Brazil </strong>, I currently live in the interior of the state of
+              I&apos;m from <strong>Salvador, Bahia, Brazil </strong>, I currently live in the state of
               <strong> Bahia</strong>, in the city of
               <strong> Senhor do Bonfim </strong>.
             </Typography>
