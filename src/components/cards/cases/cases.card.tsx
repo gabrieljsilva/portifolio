@@ -57,7 +57,18 @@ export function CasesCard({ title, description, thumbnailUrl, technologies }: Ca
             {description}
           </Typography>
           <Box position={"relative"}>
-            <TechnologiesListFragment cardWidth={cardWidth} technologies={technologies} />
+            <Box
+              width={"100%"}
+              display={"flex"}
+              position={"absolute"}
+              sx={{
+                [theme.breakpoints.down("md")]: {
+                  justifyContent: "center",
+                },
+              }}
+            >
+              <TechnologiesListFragment cardWidth={cardWidth} technologies={technologies} />
+            </Box>
           </Box>
         </Grid>
       </Grid>

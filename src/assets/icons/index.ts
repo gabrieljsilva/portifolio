@@ -9,6 +9,9 @@ import postgresql from "./postgresql-icon.svg";
 import typescript from "./typescript-icon.svg";
 import nestjs from "./nestjs-icon.svg";
 import nextJs from "./next-icon.svg";
+import linkedIn from "./linkedin-icon.svg";
+import email from "./email-icon.svg";
+import github from "./github-icon.svg";
 
 export const javascriptIcon = javascript;
 export const reactIcon = react;
@@ -21,3 +24,6 @@ export const postgresqlIcon = postgresql;
 export const typescriptIcon = typescript;
 export const nestjsIcon = nestjs;
 export const nextJsIcon = nextJs;
+export const linkedInIcon = linkedIn;
+export const emailIcon = email;
+export const githubIcon = github;

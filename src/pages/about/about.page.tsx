@@ -2,35 +2,30 @@ import { Link } from "react-router-dom";
 import { Avatar, Box, Button, Grid, Stack, Typography, useTheme } from "@mui/material";
 import { differenceInYears } from "date-fns";
 import { GlassedContainer } from "../../components";
+import { TechnologiesListFragment } from "../../components/cards/cases/fragments";
+import { emailIcon, githubIcon, linkedInIcon } from "../../assets/icons";
 
 export function AboutPage() {
   const theme = useTheme();
+
   const avatarSize = "12rem";
   const myBirthDate = new Date("2000-01-23");
   const myAge = differenceInYears(new Date(Date.now()), myBirthDate);
 
+  const handleRedirect = (url: string) => {
+    window.location.replace(url);
+  };
+
   return (
     <Box p={2} width={"100%"}>
-      <GlassedContainer width={"100%"}>
-        <Grid container justifyContent={"center"} alignItems={"center"}>
-          <Grid item xs={12} md={4} lg={3} xl={2}>
-            <Stack width={"100%"} alignItems={"center"}>
+      <GlassedContainer>
+        <Grid container>
+          <Grid item xs={12} md={3} justifyContent={"center"} width={"100%"}>
+            <Box display={"flex"} justifyContent={"center"}>
               <Avatar src={"/images/photos/avatar.jpeg"} sx={{ height: avatarSize, width: avatarSize }} />
-            </Stack>
+            </Box>
           </Grid>
-
-          <Grid
-            item
-            xs={12}
-            md={8}
-            lg={9}
-            xl={10}
-            sx={{
-              [theme.breakpoints.down("md")]: {
-                marginTop: "20px",
-              },
-            }}
-          >
+          <Grid item xs={12} md={9} position={"relative"} alignItems={"stretch"}>
             <Typography
               marginBottom={"1rem"}
               fontSize={"1.75rem"}
@@ -45,6 +40,7 @@ export function AboutPage() {
             >
               Who am I?
             </Typography>
+
             <Typography
               color={"white"}
               variant={"body1"}
@@ -57,8 +53,31 @@ export function AboutPage() {
               My name is <strong>Gabriel de Jesus Silva</strong>, I&apos;m <strong> {myAge} years old </strong>and
               I&apos;m from <strong>Salvador, Bahia, Brazil </strong>, I currently live in the state of
               <strong> Bahia</strong>, in the city of
-              <strong> Senhor do Bonfim </strong>.
+              <strong> Senhor do Bonfim</strong>. I started my career as a developer in 2018 by interning at a company
+              in my city.
             </Typography>
+            <Box position={"absolute"} bottom={"-3.25rem"}>
+              <TechnologiesListFragment
+                cardWidth={400}
+                technologies={[
+                  {
+                    name: "LinkedIn",
+                    icon: linkedInIcon,
+                    onClick: () => handleRedirect("https://www.linkedin.com/in/gabrieldjs21/"),
+                  },
+                  {
+                    name: "Github",
+                    icon: githubIcon,
+                    onClick: () => handleRedirect("https://github.com/gabrieljsilva"),
+                  },
+                  {
+                    name: "Contato",
+                    icon: emailIcon,
+                    onClick: () => handleRedirect("/"),
+                  },
+                ]}
+              />
+            </Box>
           </Grid>
         </Grid>
       </GlassedContainer>
@@ -84,6 +103,11 @@ export function AboutPage() {
               In the same year I also started my graduation in <strong> Computer Science </strong> in the same institute
               and completed 4 semesters of 8.
             </Typography>
+            <Stack mt={6} width={"100%"} alignItems={"center"}>
+              <Link to={"/skills"}>
+                <Button variant={"outlined"}>see my skills</Button>
+              </Link>
+            </Stack>
           </GlassedContainer>
         </Grid>
 
