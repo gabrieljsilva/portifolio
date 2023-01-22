@@ -1,25 +1,28 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { Box, Grid, Typography, useTheme } from "@mui/material";
 import { GlassedContainer } from "../glassed-container";
-import { CasesCardTechnologyIcon } from "./fragments";
-
-interface CasesCardTechnologyItem {
-  name: string;
-  icon: string;
-}
+import { CasesCardTechnologyItem, TechnologiesListFragment } from "./fragments";
 
 interface CasesCardProps {
   title: string;
   description: string | ReactNode;
   thumbnailUrl: string;
-  technologies?: CasesCardTechnologyItem[];
+  technologies: CasesCardTechnologyItem[];
 }
 
 export function CasesCard({ title, description, thumbnailUrl, technologies }: CasesCardProps) {
   const theme = useTheme();
+  const [cardWidth, setCardWidth] = useState(0);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (cardRef?.current?.offsetWidth) {
+      setCardWidth(cardRef?.current?.offsetWidth);
+    }
+  }, [cardRef]);
 
   return (
-    <GlassedContainer>
+    <GlassedContainer ref={cardRef}>
       <Grid container alignItems={"center"}>
         <Grid
           item
@@ -32,7 +35,19 @@ export function CasesCard({ title, description, thumbnailUrl, technologies }: Ca
             },
           }}
         >
-          <img src={thumbnailUrl} width={"300rem"} alt={"company logo image"} />
+          <Box
+            sx={{
+              width: "20rem",
+              [theme.breakpoints.only("sm")]: {
+                width: "15rem",
+              },
+              [theme.breakpoints.only("xs")]: {
+                width: "10rem",
+              },
+            }}
+          >
+            <img src={thumbnailUrl} width={"100%"} alt={"company logo image"} />
+          </Box>
         </Grid>
         <Grid item sm={12} md={7} lg={8}>
           <Typography variant={"h1"} fontSize={"2rem"} fontWeight={"600"} color={"white"}>
@@ -42,21 +57,7 @@ export function CasesCard({ title, description, thumbnailUrl, technologies }: Ca
             {description}
           </Typography>
           <Box position={"relative"}>
-            <Box
-              display={"flex"}
-              gap={1}
-              position={"absolute"}
-              sx={{
-                [theme.breakpoints.down("md")]: {
-                  justifyContent: "center",
-                  width: "100%",
-                },
-              }}
-            >
-              {technologies?.map(({ name, icon }, index) => (
-                <CasesCardTechnologyIcon key={index} src={icon} name={name} />
-              ))}
-            </Box>
+            <TechnologiesListFragment cardWidth={cardWidth} technologies={technologies} />
           </Box>
         </Grid>
       </Grid>

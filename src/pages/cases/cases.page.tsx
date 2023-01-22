@@ -53,12 +53,11 @@ export function CasesPage() {
           },
         ]}
       />
-
       <CasesCard
         title={"Fleury - Medical Scales"}
-        description={`Fleury - Medical Scales was a project that I worked on from the backend to the web and mobile frontend.
-          Using Node.js, React and React Native. The idea of the project was to create a scale application for
-          doctors in the Fleury network. The objective was to facilitate the negotiation of scales between the
+        description={`Fleury - Medical Scales was a project that I worked on from the backend to the web and mobile frontend. 
+          Using Node.js, React and React Native. The idea of the project was to create a scale application for 
+          doctors in the Fleury network. The objective was to facilitate the negotiation of scales between the 
           doctors.`}
         thumbnailUrl={"/images/logo/fleury-logo.png"}
         technologies={[

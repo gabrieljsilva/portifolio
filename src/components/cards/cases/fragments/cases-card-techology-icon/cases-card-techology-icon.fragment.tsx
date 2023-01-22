@@ -13,6 +13,7 @@ export function CasesCardTechnologyIcon({ src, name }: CasesCardTechnologyIconPr
       mt={1}
       bgcolor={"rgba(10, 10, 10, .50)"}
       sx={{
+        userSelect: "none",
         "&:hover": {
           background: "rgba(10, 10, 10, .85)",
         },
