@@ -1,7 +1,7 @@
 import { Box, IconButton, useTheme } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { CasesCardTechnologyIcon } from "../cases-card-techology-icon";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export interface CasesCardTechnologyItem {
   name: string;
@@ -13,26 +13,24 @@ interface TechnologiesListFragmentProps {
   cardWidth: number;
 }
 
-const TOTAL_ITEMS_TO_DISPLAY = 5;
-
 export function TechnologiesListFragment({ technologies, cardWidth }: TechnologiesListFragmentProps) {
   const theme = useTheme();
   const [index, setIndex] = useState(0);
-  const [containerWidth, setContainerWidth] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (containerRef?.current?.offsetWidth) {
-      setContainerWidth(containerRef?.current?.offsetWidth);
-    }
-  }, [containerRef]);
+  const containerWidth = containerRef?.current?.offsetWidth || 0;
+  const displayArrows = cardWidth * 0.75 <= containerWidth;
+
+  // approximateIconSizeInPixel is an approximate value for each icon item
+  // with spacing, it doesn't have to be an exact
+  // value, but enough to have a good distribution of icons
+  // on each cell phone or tablet screen size
+  const approximateIconSizeInPixel = 90;
+  const itemsToDisplay = Math.floor(cardWidth / approximateIconSizeInPixel);
+  const items = technologies.slice(index, displayArrows ? itemsToDisplay + index : technologies.length);
 
   const handleNextItem = () => setIndex((currentIndex) => currentIndex + 1);
   const handlePreviousItem = () => setIndex((currentIndex) => currentIndex - 1);
-
-  const displayArrows = cardWidth * 0.75 <= containerWidth;
-
-  const items = technologies.slice(index, displayArrows ? TOTAL_ITEMS_TO_DISPLAY + index : technologies.length);
 
   return (
     <Box width={"100%"} display={"flex"} justifyContent={"center"}>
@@ -70,7 +68,7 @@ export function TechnologiesListFragment({ technologies, cardWidth }: Technologi
         <IconButton
           onClick={handleNextItem}
           sx={{
-            visibility: displayArrows && index + TOTAL_ITEMS_TO_DISPLAY < technologies.length ? "visible" : "hidden",
+            visibility: displayArrows && index + itemsToDisplay < technologies.length ? "visible" : "hidden",
             [theme.breakpoints.up("sm")]: {
               display: "none",
             },
