@@ -1,7 +1,7 @@
 import { Box, IconButton, useTheme } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { CasesCardTechnologyIcon } from "../cases-card-techology-icon";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 export interface CasesCardTechnologyItem {
   name: string;
@@ -31,7 +31,15 @@ export function TechnologiesListFragment({ technologies, cardWidth }: Technologi
   const handlePreviousItem = () => setIndex((currentIndex) => currentIndex - 1);
 
   return (
-    <Box width={"100%"} display={"flex"} justifyContent={"center"}>
+    <Box
+      width={"100%"}
+      display={"flex"}
+      sx={{
+        [theme.breakpoints.down("md")]: {
+          justifyContent: "center",
+        },
+      }}
+    >
       <Box
         mt={0.5}
         color={"white"}

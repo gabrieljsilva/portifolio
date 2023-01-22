@@ -1,3 +1,4 @@
+import javascript from "./javascript-icon.svg";
 import react from "./react-icon.svg";
 import reactNative from "./react-native-icon.svg";
 import graphQL from "./graphql-icon.svg";
@@ -9,6 +10,7 @@ import typescript from "./typescript-icon.svg";
 import nestjs from "./nestjs-icon.svg";
 import nextJs from "./next-icon.svg";
 
+export const javascriptIcon = javascript;
 export const reactIcon = react;
 export const reactNativeIcon = reactNative;
 export const graphQLIcon = graphQL;
