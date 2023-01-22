@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useTheme } from "@mui/material";
 import { GlassedContainer } from "../glassed-container";
 import { CasesCardTechnologyIcon } from "./fragments";
 
@@ -16,13 +16,25 @@ interface CasesCardProps {
 }
 
 export function CasesCard({ title, description, thumbnailUrl, technologies }: CasesCardProps) {
+  const theme = useTheme();
+
   return (
     <GlassedContainer>
       <Grid container alignItems={"center"}>
-        <Grid item xs={4}>
+        <Grid
+          item
+          sm={12}
+          md={5}
+          lg={4}
+          sx={{
+            [theme.breakpoints.down("md")]: {
+              mb: 2,
+            },
+          }}
+        >
           <img src={thumbnailUrl} width={"300rem"} alt={"company logo image"} />
         </Grid>
-        <Grid item xs={8}>
+        <Grid item sm={12} md={7} lg={8}>
           <Typography variant={"h1"} fontSize={"2rem"} fontWeight={"600"} color={"white"}>
             {title}
           </Typography>
@@ -30,7 +42,17 @@ export function CasesCard({ title, description, thumbnailUrl, technologies }: Ca
             {description}
           </Typography>
           <Box position={"relative"}>
-            <Box display={"flex"} gap={1} position={"absolute"}>
+            <Box
+              display={"flex"}
+              gap={1}
+              position={"absolute"}
+              sx={{
+                [theme.breakpoints.down("md")]: {
+                  justifyContent: "center",
+                  width: "100%",
+                },
+              }}
+            >
               {technologies?.map(({ name, icon }, index) => (
                 <CasesCardTechnologyIcon key={index} src={icon} name={name} />
               ))}
