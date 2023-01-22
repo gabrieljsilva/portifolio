@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Avatar, Box, Button, Grid, Stack, Typography, useTheme } from "@mui/material";
 import { differenceInYears } from "date-fns";
 import { GlassedContainer } from "../../components";
