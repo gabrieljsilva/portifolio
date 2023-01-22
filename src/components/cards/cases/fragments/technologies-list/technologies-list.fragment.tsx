@@ -32,57 +32,46 @@ export function TechnologiesListFragment({ technologies, cardWidth }: Technologi
 
   return (
     <Box
-      width={"100%"}
+      color={"white"}
       display={"flex"}
+      alignItems={"center"}
+      gap={1}
+      mt={0.5}
       sx={{
         [theme.breakpoints.down("md")]: {
           justifyContent: "center",
         },
       }}
     >
-      <Box
-        mt={0.5}
-        color={"white"}
-        display={"flex"}
-        alignItems={"center"}
-        gap={1}
-        position={"absolute"}
+      <IconButton
+        onClick={handlePreviousItem}
         sx={{
-          [theme.breakpoints.down("md")]: {
-            justifyContent: "center",
+          visibility: displayArrows && index > 0 ? "visible" : "hidden",
+          [theme.breakpoints.up("sm")]: {
+            display: "none",
           },
         }}
+        color={"inherit"}
       >
-        <IconButton
-          onClick={handlePreviousItem}
-          sx={{
-            visibility: displayArrows && index > 0 ? "visible" : "hidden",
-            [theme.breakpoints.up("sm")]: {
-              display: "none",
-            },
-          }}
-          color={"inherit"}
-        >
-          <ChevronLeft fontSize={"large"} />
-        </IconButton>
+        <ChevronLeft fontSize={"large"} />
+      </IconButton>
 
-        {items?.map(({ name, icon }, index) => (
-          <CasesCardTechnologyIcon key={index} src={icon} name={name} />
-        ))}
+      {items?.map(({ name, icon }, index) => (
+        <CasesCardTechnologyIcon key={index} src={icon} name={name} />
+      ))}
 
-        <IconButton
-          onClick={handleNextItem}
-          sx={{
-            visibility: displayArrows && index + itemsToDisplay < technologies.length ? "visible" : "hidden",
-            [theme.breakpoints.up("sm")]: {
-              display: "none",
-            },
-          }}
-          color={"inherit"}
-        >
-          <ChevronRight fontSize={"large"} />
-        </IconButton>
-      </Box>
+      <IconButton
+        onClick={handleNextItem}
+        sx={{
+          visibility: displayArrows && index + itemsToDisplay < technologies.length ? "visible" : "hidden",
+          [theme.breakpoints.up("sm")]: {
+            display: "none",
+          },
+        }}
+        color={"inherit"}
+      >
+        <ChevronRight fontSize={"large"} />
+      </IconButton>
     </Box>
   );
 }
