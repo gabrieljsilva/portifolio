@@ -13,7 +13,7 @@ interface TechnologiesListFragmentProps {
   cardWidth: number;
 }
 
-const TOTAL_ITEMS_TO_DISPLAY = 6;
+const TOTAL_ITEMS_TO_DISPLAY = 5;
 
 export function TechnologiesListFragment({ technologies, cardWidth }: TechnologiesListFragmentProps) {
   const theme = useTheme();
@@ -30,8 +30,9 @@ export function TechnologiesListFragment({ technologies, cardWidth }: Technologi
   const handleNextItem = () => setIndex((currentIndex) => currentIndex + 1);
   const handlePreviousItem = () => setIndex((currentIndex) => currentIndex - 1);
 
-  const items = technologies.slice(index, TOTAL_ITEMS_TO_DISPLAY + index);
-  const displayArrows = cardWidth * 0.85 <= containerWidth;
+  const displayArrows = cardWidth * 0.75 <= containerWidth;
+
+  const items = technologies.slice(index, displayArrows ? TOTAL_ITEMS_TO_DISPLAY + index : technologies.length);
 
   return (
     <Box width={"100%"} display={"flex"} justifyContent={"center"}>
