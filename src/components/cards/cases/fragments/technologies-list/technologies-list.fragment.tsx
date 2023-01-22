@@ -6,6 +6,7 @@ import { useState } from "react";
 export interface CasesCardTechnologyItem {
   name: string;
   icon: string;
+  onClick?: () => void;
 }
 
 interface TechnologiesListFragmentProps {
@@ -56,8 +57,8 @@ export function TechnologiesListFragment({ technologies, cardWidth }: Technologi
         <ChevronLeft fontSize={"large"} />
       </IconButton>
 
-      {items?.map(({ name, icon }, index) => (
-        <CasesCardTechnologyIcon key={index} src={icon} name={name} />
+      {items?.map(({ name, icon, onClick }, index) => (
+        <CasesCardTechnologyIcon onClick={onClick} key={index} src={icon} name={name} />
       ))}
 
       <IconButton
