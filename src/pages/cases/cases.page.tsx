@@ -1,6 +1,14 @@
 import { CasesCard } from "../../components";
 import { Box } from "@mui/material";
-import { dockerIcon, graphQLIcon, nodeIcon, postgresqlIcon, reactIcon, typescriptIcon } from "../../assets/icons";
+import {
+  dockerIcon,
+  graphQLIcon,
+  nestjsIcon,
+  nodeIcon,
+  postgresqlIcon,
+  reactIcon,
+  typescriptIcon,
+} from "../../assets/icons";
 
 export function CasesPage() {
   return (
@@ -23,6 +31,10 @@ export function CasesPage() {
           {
             name: "React.js",
             icon: reactIcon,
+          },
+          {
+            name: "Nest.js",
+            icon: nestjsIcon,
           },
           {
             name: "PostgresSQL",
