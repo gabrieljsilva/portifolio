@@ -15,7 +15,7 @@ export function AboutPage() {
         <Grid container justifyContent={"center"} alignItems={"center"}>
           <Grid item xs={12} md={4} lg={3} xl={2}>
             <Stack width={"100%"} alignItems={"center"}>
-              <Avatar src={"/avatar.jpeg"} sx={{ height: avatarSize, width: avatarSize }} />
+              <Avatar src={"/images/photos/avatar.jpeg"} sx={{ height: avatarSize, width: avatarSize }} />
             </Stack>
           </Grid>
 
