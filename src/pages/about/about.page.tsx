@@ -53,7 +53,8 @@ export function AboutPage() {
               My name is <strong>Gabriel de Jesus Silva</strong>, I&apos;m <strong> {myAge} years old </strong>and
               I&apos;m from <strong>Salvador, Bahia, Brazil </strong>, I currently live in the state of
               <strong> Bahia</strong>, in the city of
-              <strong> Senhor do Bonfim</strong>.
+              <strong> Senhor do Bonfim</strong>. I started my career as a developer in 2018 by interning at a company
+              in my city.
             </Typography>
             <Box position={"absolute"} bottom={"-3.25rem"}>
               <TechnologiesListFragment
