@@ -1,7 +1,7 @@
 import { Box, IconButton, useTheme } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { CasesCardTechnologyIcon } from "../cases-card-techology-icon";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export interface CasesCardTechnologyItem {
   name: string;
@@ -16,18 +16,16 @@ interface TechnologiesListFragmentProps {
 export function TechnologiesListFragment({ technologies, cardWidth }: TechnologiesListFragmentProps) {
   const theme = useTheme();
   const [index, setIndex] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const containerWidth = containerRef?.current?.offsetWidth || 0;
-  const displayArrows = cardWidth * 0.75 <= containerWidth;
 
   // approximateIconSizeInPixel is an approximate value for each icon item
   // with spacing, it doesn't have to be an exact
   // value, but enough to have a good distribution of icons
   // on each cell phone or tablet screen size
-  const approximateIconSizeInPixel = 90;
+  const approximateIconSizeInPixel = 75;
   const itemsToDisplay = Math.floor(cardWidth / approximateIconSizeInPixel);
-  const items = technologies.slice(index, displayArrows ? itemsToDisplay + index : technologies.length);
+  const displayArrows = cardWidth * 0.75 <= approximateIconSizeInPixel * itemsToDisplay;
+  const endIndex = displayArrows ? itemsToDisplay + index : technologies.length;
+  const items = technologies.slice(index, endIndex);
 
   const handleNextItem = () => setIndex((currentIndex) => currentIndex + 1);
   const handlePreviousItem = () => setIndex((currentIndex) => currentIndex - 1);
@@ -37,7 +35,6 @@ export function TechnologiesListFragment({ technologies, cardWidth }: Technologi
       <Box
         mt={0.5}
         color={"white"}
-        ref={containerRef}
         display={"flex"}
         alignItems={"center"}
         gap={1}
