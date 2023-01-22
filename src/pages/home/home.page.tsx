@@ -50,14 +50,16 @@ export function HomePage() {
             </Typography>
           </Stack>
         </Grid>
-        <Grid item justifySelf={"flex-end"} sm={12} md={4} lg={6}>
+        <Grid item justifySelf={"flex-end"} justifyContent={"center"} sm={12} md={4} lg={6}>
           <Lottie
             animationData={programmingLottieAnimation}
             play
             loop
             style={{
               display: "flex",
-              height: "100%",
+              margin: "auto",
+              maxWidth: "600px",
+              width: "100%",
             }}
           />
         </Grid>
