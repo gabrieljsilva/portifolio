@@ -103,6 +103,11 @@ export function AboutPage() {
               In the same year I also started my graduation in <strong> Computer Science </strong> in the same institute
               and completed 4 semesters of 8.
             </Typography>
+            <Stack mt={6} width={"100%"} alignItems={"center"}>
+              <Link to={"/skills"}>
+                <Button variant={"outlined"}>see my skills</Button>
+              </Link>
+            </Stack>
           </GlassedContainer>
         </Grid>
 
