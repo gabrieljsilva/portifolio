@@ -23,7 +23,7 @@ export function SkillCard({ name, icon, description, startUsing }: SkillCardProp
             {name}
           </Typography>
           <Typography textAlign={"center"} variant={"subtitle1"} color={"white"} fontSize={"1.25rem"}>
-            {yearsOfExperience} anos de experiência
+            {yearsOfExperience} years of experience
           </Typography>
         </Stack>
       </Stack>
