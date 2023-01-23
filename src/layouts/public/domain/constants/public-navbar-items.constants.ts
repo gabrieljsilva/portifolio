@@ -21,4 +21,9 @@ export const publicMenuItems: Array<Omit<NavbarItemProps, "active">> = [
     name: "Cases",
     path: "/cases",
   },
+  {
+    key: "EXPERIENCE",
+    name: "Experiences",
+    path: "/experiences",
+  },
 ];

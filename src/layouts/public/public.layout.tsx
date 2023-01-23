@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom";
-import { AnimatedParticles, Navbar } from "../../components";
+import { AnimatedParticles, BottomNavigation, Navbar } from "../../components";
 import { useNavbar, useParticles } from "../../hooks";
 import { publicMenuItems } from "./domain";
 import { FadeInOutTransition } from "../../transitions";
-import { Stack, Box } from "@mui/material";
+import { Stack, Box, useTheme } from "@mui/material";
 
 export function PublicLayout() {
+  const theme = useTheme();
   const navbar = useNavbar(publicMenuItems);
   const particles = useParticles({
     style: { position: "fixed", top: "0", maxWidth: "100vw", filter: "blur(1px)" },
@@ -20,8 +21,40 @@ export function PublicLayout() {
     <Stack minHeight={"100vh"}>
       <Stack alignItems={"center"} flex={1}>
         <Stack flex={1} width={"100%"} maxWidth={"1920px"} position={"relative"} zIndex={2}>
-          <Navbar {...navbar} />
-          <Outlet />
+          <Box
+            sx={{
+              [theme.breakpoints.only("xs")]: {
+                display: "none",
+              },
+            }}
+          >
+            <Navbar {...navbar} />
+          </Box>
+
+          <Box
+            sx={{
+              [theme.breakpoints.only("xs")]: {
+                pb: 12,
+                pt: 2,
+              },
+            }}
+          >
+            <Outlet />
+          </Box>
+
+          <Box
+            sx={{
+              position: "fixed",
+              bottom: 0,
+              left: 0,
+              right: 0,
+              [theme.breakpoints.up("sm")]: {
+                display: "none",
+              },
+            }}
+          >
+            <BottomNavigation />
+          </Box>
         </Stack>
       </Stack>
 

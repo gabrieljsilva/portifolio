@@ -20,7 +20,7 @@ export function AboutPage() {
   };
 
   return (
-    <Box p={2} width={"100%"}>
+    <Box px={2} width={"100%"}>
       <GlassedContainer>
         <Grid container>
           <Grid item xs={12} md={3} justifyContent={"center"} width={"100%"}>
@@ -58,7 +58,17 @@ export function AboutPage() {
               <strong> Bahia</strong>, in the city of <strong>Senhor do Bonfim</strong>. I started my career as a
               developer at the end of 2018 by interning at a company in my city.
             </Typography>
-            <Box position={"absolute"} bottom={"-3.25rem"}>
+            <Box
+              position={"absolute"}
+              bottom={"-3.25rem"}
+              sx={{
+                [theme.breakpoints.down("md")]: {
+                  display: "flex",
+                  width: "100%",
+                  justifyContent: "center",
+                },
+              }}
+            >
               <TechnologiesListFragment
                 cardWidth={400}
                 technologies={[
