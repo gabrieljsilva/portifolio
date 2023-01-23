@@ -1,10 +1,9 @@
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import { AnimatedParticles, Navbar } from "../../components";
+import { AnimatedParticles, BottomNavigation, Navbar } from "../../components";
 import { useNavbar, useParticles } from "../../hooks";
 import { publicMenuItems } from "./domain";
 import { FadeInOutTransition } from "../../transitions";
-import { Stack, Box, useTheme, BottomNavigation, BottomNavigationAction } from "@mui/material";
-import { BadgeOutlined, Done, Home, Person, Star } from "@mui/icons-material";
+import { Stack, Box, useTheme } from "@mui/material";
 
 export function PublicLayout() {
   const theme = useTheme();
@@ -17,10 +16,6 @@ export function PublicLayout() {
   const linearGradiantColor2 = `rgba(20,17,34,${linearGradiantOpacity})`;
   const linearGradiantColor3 = `rgba(75,0,84,${linearGradiantOpacity})`;
   const linearGradientBackGround = `linear-gradient(345deg, ${linearGradiantColor1} 0%, ${linearGradiantColor2} 52%, ${linearGradiantColor3} 100%)`;
-
-  const location = useLocation();
-  const navigate = useNavigate();
-  const activeItem = location.pathname;
 
   return (
     <Stack minHeight={"100vh"}>
@@ -58,27 +53,7 @@ export function PublicLayout() {
               },
             }}
           >
-            <BottomNavigation
-              sx={{
-                background: "rgba(10, 10, 10, .85)",
-              }}
-              showLabels
-              value={activeItem}
-              onChange={(_, path) => {
-                return navigate(path);
-              }}
-            >
-              <BottomNavigationAction sx={{ color: "white" }} value={"/"} label={"Home"} icon={<Home />} />
-              <BottomNavigationAction sx={{ color: "white" }} value={"/about"} label={"About"} icon={<Person />} />
-              <BottomNavigationAction sx={{ color: "white" }} value={"/skills"} label={"Skills"} icon={<Star />} />
-              <BottomNavigationAction sx={{ color: "white" }} value={"/cases"} label={"Cases"} icon={<Done />} />
-              <BottomNavigationAction
-                sx={{ color: "white" }}
-                value={"/experiences"}
-                label={"Experiences"}
-                icon={<BadgeOutlined />}
-              />
-            </BottomNavigation>
+            <BottomNavigation />
           </Box>
         </Stack>
       </Stack>
