@@ -20,7 +20,7 @@ export function AboutPage() {
   };
 
   return (
-    <Box p={2} width={"100%"}>
+    <Box px={2} width={"100%"}>
       <GlassedContainer>
         <Grid container>
           <Grid item xs={12} md={3} justifyContent={"center"} width={"100%"}>

@@ -12,7 +12,7 @@ export function Navbar({ items }: NavbarProps) {
       direction={"row"}
       width={"100%"}
       height={NAVBAR_HEIGHT}
-      marginBottom={NAVBAR_HEIGHT}
+      mb={2}
       justifyContent={"center"}
       alignItems={"flex-start"}
     >
