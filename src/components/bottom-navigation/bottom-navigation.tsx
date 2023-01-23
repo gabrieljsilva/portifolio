@@ -9,22 +9,42 @@ export function BottomNavigation() {
 
   return (
     <MuiBottomNavigation
+      showLabels
       sx={{
         background: "rgba(10, 10, 10, .85)",
         px: 2,
       }}
-      showLabels
       value={activeItem}
       onChange={(_, path) => {
         return navigate(path);
       }}
     >
-      <BottomNavigationAction sx={{ color: "white" }} value={"/"} label={"Home"} icon={<Home />} />
-      <BottomNavigationAction sx={{ color: "white" }} value={"/about"} label={"About"} icon={<Person />} />
-      <BottomNavigationAction sx={{ color: "white" }} value={"/skills"} label={"Skills"} icon={<Star />} />
-      <BottomNavigationAction sx={{ color: "white" }} value={"/cases"} label={"Cases"} icon={<Done />} />
       <BottomNavigationAction
-        sx={{ color: "white" }}
+        sx={{ color: "white", minWidth: "60px" }}
+        value={"/"}
+        label={"Home"}
+        icon={<Home fontSize={"small"} />}
+      />
+      <BottomNavigationAction
+        sx={{ color: "white", minWidth: "70px" }}
+        value={"/about"}
+        label={"About"}
+        icon={<Person />}
+      />
+      <BottomNavigationAction
+        sx={{ color: "white", minWidth: "70px" }}
+        value={"/skills"}
+        label={"Skills"}
+        icon={<Star />}
+      />
+      <BottomNavigationAction
+        sx={{ color: "white", minWidth: "70px" }}
+        value={"/cases"}
+        label={"Cases"}
+        icon={<Done />}
+      />
+      <BottomNavigationAction
+        sx={{ color: "white", minWidth: "70px" }}
         value={"/experiences"}
         label={"Experiences"}
         icon={<BadgeOutlined />}
