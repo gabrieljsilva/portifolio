@@ -12,6 +12,8 @@ import nextJs from "./next-icon.svg";
 import linkedIn from "./linkedin-icon.svg";
 import email from "./email-icon.svg";
 import github from "./github-icon.svg";
+import vue from "./vue-icon.svg";
+import mySql from "./mysql-logo.svg";
 
 export const javascriptIcon = javascript;
 export const reactIcon = react;
@@ -27,3 +29,5 @@ export const nextJsIcon = nextJs;
 export const linkedInIcon = linkedIn;
 export const emailIcon = email;
 export const githubIcon = github;
+export const vueIcon = vue;
+export const mySqlIcon = mySql;
