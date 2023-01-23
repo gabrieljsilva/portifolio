@@ -26,25 +26,25 @@ export function BottomNavigation() {
         icon={<Home fontSize={"small"} />}
       />
       <BottomNavigationAction
-        sx={{ color: "white", minWidth: "70px" }}
+        sx={{ color: "white", minWidth: "60px" }}
         value={"/about"}
         label={"About"}
         icon={<Person />}
       />
       <BottomNavigationAction
-        sx={{ color: "white", minWidth: "70px" }}
+        sx={{ color: "white", minWidth: "60px" }}
         value={"/skills"}
         label={"Skills"}
         icon={<Star />}
       />
       <BottomNavigationAction
-        sx={{ color: "white", minWidth: "70px" }}
+        sx={{ color: "white", minWidth: "60px" }}
         value={"/cases"}
         label={"Cases"}
         icon={<Done />}
       />
       <BottomNavigationAction
-        sx={{ color: "white", minWidth: "70px" }}
+        sx={{ color: "white", minWidth: "60px" }}
         value={"/experiences"}
         label={"Experiences"}
         icon={<BadgeOutlined />}
