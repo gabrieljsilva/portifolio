@@ -14,6 +14,7 @@ import email from "./email-icon.svg";
 import github from "./github-icon.svg";
 import vue from "./vue-icon.svg";
 import mySql from "./mysql-logo.svg";
+import mongoDB from "./mongodb-icon.svg";
 
 export const javascriptIcon = javascript;
 export const reactIcon = react;
@@ -31,3 +32,4 @@ export const emailIcon = email;
 export const githubIcon = github;
 export const vueIcon = vue;
 export const mySqlIcon = mySql;
+export const mongoDBIcon = mongoDB;

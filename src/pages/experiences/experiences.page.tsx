@@ -3,6 +3,7 @@ import {
   dockerIcon,
   graphQLIcon,
   javascriptIcon,
+  mongoDBIcon,
   mySqlIcon,
   nestjsIcon,
   nextJsIcon,
@@ -106,6 +107,36 @@ export function ExperiencesPage() {
             {
               name: "MySQL",
               icon: mySqlIcon,
+            },
+          ]}
+        />
+      </Grid>
+      <Grid item>
+        <CasesCard
+          intervalDate={[new Date("2018-12-02"), new Date("2019-01-02")]}
+          title={"Newtic"}
+          description={`
+          I worked as an intern in web programming at the company.
+          During the internship I developed APIs using Node.js, Express and MongoDB
+          and user interfaces using Vue.js.
+        `}
+          thumbnailUrl={"/images/logo/newtic-logo.svg"}
+          technologies={[
+            {
+              name: "Javascript",
+              icon: javascriptIcon,
+            },
+            {
+              name: "Node.js",
+              icon: nodeIcon,
+            },
+            {
+              name: "Vue.js",
+              icon: vueIcon,
+            },
+            {
+              name: "MongoDB",
+              icon: mongoDBIcon,
             },
           ]}
         />
