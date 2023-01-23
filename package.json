@@ -13,8 +13,10 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.4",
     "date-fns": "^2.29.3",
+    "formik": "^2.2.9",
     "framer-motion": "^8.0.2",
     "husky": "^8.0.3",
     "kebab-case": "^1.0.2",
@@ -26,7 +28,8 @@
     "react-lottie-player": "^1.5.4",
     "react-router-dom": "^6.6.1",
     "react-tsparticles": "^2.7.1",
-    "tsparticles": "^2.7.1"
+    "tsparticles": "^2.7.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
