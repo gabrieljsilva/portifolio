@@ -1,4 +1,4 @@
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { AnimatedParticles, BottomNavigation, Navbar } from "../../components";
 import { useNavbar, useParticles } from "../../hooks";
 import { publicMenuItems } from "./domain";
