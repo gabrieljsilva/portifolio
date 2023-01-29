@@ -83,6 +83,7 @@ export function ExperiencesPage() {
         <GlassedCard
           intervalDate={[new Date("2019-09-02"), new Date("2020-02-02")]}
           title={"Cameja"}
+          subTitle={"Software Developer"}
           description={`
           Cameja is a lawtech company that aims to facilitate the work of 
           lawyers, mediators, and arbitrators by creating and visualizing petitions and judicial 
@@ -116,6 +117,7 @@ export function ExperiencesPage() {
         <GlassedCard
           intervalDate={[new Date("2018-12-02"), new Date("2019-01-02")]}
           title={"Newtic"}
+          subTitle={"Software Developer Intern"}
           description={`
           I worked as an intern in web programming at the company.
           During the internship I developed APIs using Node.js, Express and MongoDB
