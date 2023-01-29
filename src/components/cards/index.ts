@@ -1,3 +1,3 @@
 export * from "./glassed-container";
-export * from "./cases";
+export * from "./glassed-card";
 export * from "./skills";

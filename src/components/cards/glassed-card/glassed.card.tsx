@@ -1,20 +1,32 @@
 import { ReactNode, useEffect, useRef, useState } from "react";
-import { Box, Grid, Typography, useTheme } from "@mui/material";
+import { Box, Button, Collapse, Grid, Typography, useTheme } from "@mui/material";
 import { GlassedContainer } from "../glassed-container";
-import { CasesCardTechnologyItem, TechnologiesListFragment } from "./fragments";
 import { format } from "date-fns";
+import { ArrowDownwardRounded, ArrowUpwardRounded } from "@mui/icons-material";
+import { PaginatedIconListItem, PaginatedIconList } from "../../paginated-icon-list";
 
-interface CasesCardProps {
+interface GlassedCardProps {
   title: string;
+  subTitle?: string;
   intervalDate?: [Date, Date];
   description: string | ReactNode;
+  details?: string | ReactNode;
   thumbnailUrl: string;
-  technologies: CasesCardTechnologyItem[];
+  technologies: PaginatedIconListItem[];
 }
 
-export function CasesCard({ title, description, thumbnailUrl, technologies, intervalDate }: CasesCardProps) {
+export function GlassedCard({
+  title,
+  subTitle,
+  description,
+  details,
+  thumbnailUrl,
+  technologies,
+  intervalDate,
+}: GlassedCardProps) {
   const theme = useTheme();
   const [cardWidth, setCardWidth] = useState(0);
+  const [isAccordionExpanded, setIsAccordionExpanded] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -34,8 +46,8 @@ export function CasesCard({ title, description, thumbnailUrl, technologies, inte
   };
 
   return (
-    <GlassedContainer ref={cardRef}>
-      <Grid container alignItems={"center"}>
+    <GlassedContainer>
+      <Grid container alignItems={"flex-start"}>
         <Grid
           item
           sm={12}
@@ -44,6 +56,9 @@ export function CasesCard({ title, description, thumbnailUrl, technologies, inte
           sx={{
             [theme.breakpoints.down("md")]: {
               mb: 2,
+            },
+            [theme.breakpoints.up("md")]: {
+              mt: 3,
             },
           }}
         >
@@ -81,10 +96,36 @@ export function CasesCard({ title, description, thumbnailUrl, technologies, inte
           <Typography variant={"h1"} fontSize={"2rem"} fontWeight={"600"} color={"white"}>
             {title}
           </Typography>
+
+          {subTitle && (
+            <Typography variant={"h1"} fontSize={"1.5rem"} fontWeight={"200"} color={"white"}>
+              {subTitle}
+            </Typography>
+          )}
+
           <Typography color={"white"} variant={"body1"} fontWeight={500} mt={2}>
             {description}
           </Typography>
-          <Box position={"relative"}>
+
+          {details && (
+            <>
+              <Box display={"flex"} width={"100%"} justifyContent={"center"} py={2}>
+                <Button
+                  sx={{ minWidth: "160px" }}
+                  variant={"outlined"}
+                  color={"primary"}
+                  onClick={() => setIsAccordionExpanded(!isAccordionExpanded)}
+                  endIcon={isAccordionExpanded ? <ArrowUpwardRounded /> : <ArrowDownwardRounded />}
+                >
+                  {isAccordionExpanded ? "Ver menos" : "Ver mais"}
+                </Button>
+              </Box>
+
+              <Collapse in={isAccordionExpanded}>{details}</Collapse>
+            </>
+          )}
+
+          <Box position={"relative"} ref={cardRef}>
             <Box
               width={"100%"}
               display={"flex"}
@@ -95,7 +136,7 @@ export function CasesCard({ title, description, thumbnailUrl, technologies, inte
                 },
               }}
             >
-              <TechnologiesListFragment cardWidth={cardWidth} technologies={technologies} />
+              <PaginatedIconList cardWidth={cardWidth} technologies={technologies} />
             </Box>
           </Box>
         </Grid>

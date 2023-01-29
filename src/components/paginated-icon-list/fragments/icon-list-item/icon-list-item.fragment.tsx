@@ -1,19 +1,20 @@
 import { Stack, Tooltip } from "@mui/material";
 
-interface CasesCardTechnologyIconProps {
+interface IconListItemProps {
   src: string;
   name: string;
   onClick?: () => void;
 }
 
-export function CasesCardTechnologyIcon({ src, name, onClick }: CasesCardTechnologyIconProps) {
+export function IconListItem({ src, name, onClick }: IconListItemProps) {
   return (
     <Stack
       onClick={onClick}
       justifyContent={"center"}
       alignItems={"center"}
-      mt={1}
-      bgcolor={"rgba(10, 10, 10, .50)"}
+      mx={1}
+      p={1}
+      bgcolor={"rgba(10, 10, 10, .65)"}
       sx={{
         cursor: onClick ? "pointer" : undefined,
         userSelect: "none",
@@ -21,7 +22,6 @@ export function CasesCardTechnologyIcon({ src, name, onClick }: CasesCardTechnol
           background: "rgba(10, 10, 10, .85)",
         },
       }}
-      p={1}
       borderRadius={"50%"}
     >
       <Tooltip title={name}>

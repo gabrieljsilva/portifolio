@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Avatar, Box, Button, Grid, Stack, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { differenceInYears } from "date-fns";
-import { GlassedContainer, Modal } from "../../components";
-import { TechnologiesListFragment } from "../../components/cards/cases/fragments";
+import { GlassedContainer, Modal, PaginatedIconList } from "../../components";
 import { emailIcon, githubIcon, linkedInIcon } from "../../assets/icons";
 import { ContactMeForm } from "../../modules/contacts";
 
@@ -69,7 +68,7 @@ export function AboutPage() {
                 },
               }}
             >
-              <TechnologiesListFragment
+              <PaginatedIconList
                 cardWidth={400}
                 technologies={[
                   {
