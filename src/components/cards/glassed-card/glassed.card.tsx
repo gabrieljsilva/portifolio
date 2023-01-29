@@ -7,6 +7,7 @@ import { PaginatedIconListItem, PaginatedIconList } from "../../paginated-icon-l
 
 interface GlassedCardProps {
   title: string;
+  subTitle?: string;
   intervalDate?: [Date, Date];
   description: string | ReactNode;
   details?: string | ReactNode;
@@ -16,6 +17,7 @@ interface GlassedCardProps {
 
 export function GlassedCard({
   title,
+  subTitle,
   description,
   details,
   thumbnailUrl,
@@ -94,6 +96,13 @@ export function GlassedCard({
           <Typography variant={"h1"} fontSize={"2rem"} fontWeight={"600"} color={"white"}>
             {title}
           </Typography>
+
+          {subTitle && (
+            <Typography variant={"h1"} fontSize={"1.5rem"} fontWeight={"200"} color={"white"}>
+              {subTitle}
+            </Typography>
+          )}
+
           <Typography color={"white"} variant={"body1"} fontWeight={500} mt={2}>
             {description}
           </Typography>

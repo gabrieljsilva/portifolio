@@ -24,6 +24,7 @@ export function ExperiencesPage() {
         <GlassedCard
           intervalDate={[new Date("2021-03-02"), new Date("2022-09-02")]}
           title={"RedFox Digital Solutions"}
+          subTitle={"Fullstack Software Developer"}
           description={`
           RedFox is a technology company. It works on several projects, mainly
           focused on the health sector. During the period that I worked at RedFox, I worked on several projects of that
