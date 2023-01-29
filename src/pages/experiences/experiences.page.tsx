@@ -15,13 +15,13 @@ import {
   viteIcon,
   vueIcon,
 } from "../../assets/icons";
-import { CasesCard } from "../../components";
+import { GlassedCard } from "../../components";
 
 export function ExperiencesPage() {
   return (
     <Grid container px={2} spacing={5}>
       <Grid item>
-        <CasesCard
+        <GlassedCard
           intervalDate={[new Date("2021-03-02"), new Date("2022-09-02")]}
           title={"RedFox Digital Solutions"}
           description={`
@@ -79,7 +79,7 @@ export function ExperiencesPage() {
         />
       </Grid>
       <Grid item>
-        <CasesCard
+        <GlassedCard
           intervalDate={[new Date("2019-09-02"), new Date("2020-02-02")]}
           title={"Cameja"}
           description={`
@@ -112,7 +112,7 @@ export function ExperiencesPage() {
         />
       </Grid>
       <Grid item>
-        <CasesCard
+        <GlassedCard
           intervalDate={[new Date("2018-12-02"), new Date("2019-01-02")]}
           title={"Newtic"}
           description={`

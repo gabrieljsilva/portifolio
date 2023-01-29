@@ -1,32 +1,30 @@
 import { Box, IconButton, useTheme } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
-import { CasesCardTechnologyIcon } from "../cases-card-techology-icon";
+import { IconListItem } from "./fragments";
 import { useState } from "react";
 
-export interface CasesCardTechnologyItem {
+export interface PaginatedIconListItem {
   name: string;
   icon: string;
   onClick?: () => void;
 }
 
-interface TechnologiesListFragmentProps {
-  technologies: CasesCardTechnologyItem[];
+interface PaginatedIconListProps {
+  technologies: PaginatedIconListItem[];
   cardWidth: number;
 }
 
-export function TechnologiesListFragment({ technologies, cardWidth }: TechnologiesListFragmentProps) {
+export function PaginatedIconList({ technologies, cardWidth }: PaginatedIconListProps) {
   const theme = useTheme();
   const [index, setIndex] = useState(0);
 
-  // approximateIconSizeInPixel is an approximate value for each icon item
-  // with spacing, it doesn't have to be an exact
-  // value, but enough to have a good distribution of icons
-  // on each cell phone or tablet screen size
-  const approximateIconSizeInPixel = 75;
-  const itemsToDisplay = Math.floor(cardWidth / approximateIconSizeInPixel);
-  const displayArrows = cardWidth * 0.75 <= approximateIconSizeInPixel * itemsToDisplay;
+  const approximatedIconSizeInPixel = 64;
+  const itemsToDisplay = Math.floor(cardWidth / approximatedIconSizeInPixel);
+  const displayArrows = cardWidth <= approximatedIconSizeInPixel * technologies.length;
   const endIndex = displayArrows ? itemsToDisplay + index : technologies.length;
   const items = technologies.slice(index, endIndex);
+  const showLeftButtonIcon = displayArrows && index > 0;
+  const showRightButtonIcon = displayArrows && index + itemsToDisplay < technologies.length;
 
   const handleNextItem = () => setIndex((currentIndex) => currentIndex + 1);
   const handlePreviousItem = () => setIndex((currentIndex) => currentIndex - 1);
@@ -36,7 +34,6 @@ export function TechnologiesListFragment({ technologies, cardWidth }: Technologi
       color={"white"}
       display={"flex"}
       alignItems={"center"}
-      gap={1}
       mt={0.5}
       sx={{
         [theme.breakpoints.down("md")]: {
@@ -47,10 +44,7 @@ export function TechnologiesListFragment({ technologies, cardWidth }: Technologi
       <IconButton
         onClick={handlePreviousItem}
         sx={{
-          visibility: displayArrows && index > 0 ? "visible" : "hidden",
-          [theme.breakpoints.up("sm")]: {
-            display: "none",
-          },
+          visibility: showLeftButtonIcon ? "visible" : "hidden",
         }}
         color={"inherit"}
       >
@@ -58,16 +52,13 @@ export function TechnologiesListFragment({ technologies, cardWidth }: Technologi
       </IconButton>
 
       {items?.map(({ name, icon, onClick }, index) => (
-        <CasesCardTechnologyIcon onClick={onClick} key={index} src={icon} name={name} />
+        <IconListItem onClick={onClick} key={index} src={icon} name={name} />
       ))}
 
       <IconButton
         onClick={handleNextItem}
         sx={{
-          visibility: displayArrows && index + itemsToDisplay < technologies.length ? "visible" : "hidden",
-          [theme.breakpoints.up("sm")]: {
-            display: "none",
-          },
+          visibility: showRightButtonIcon ? "visible" : "hidden",
         }}
         color={"inherit"}
       >

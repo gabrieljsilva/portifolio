@@ -1,4 +1,4 @@
-import { CasesCard } from "../../components";
+import { GlassedCard } from "../../components";
 import { Stack } from "@mui/material";
 import {
   dockerIcon,
@@ -16,7 +16,7 @@ import {
 export function CasesPage() {
   return (
     <Stack width={"100%"} px={2} rowGap={8}>
-      <CasesCard
+      <GlassedCard
         title={"Demand To Invoice"}
         description={
           "Takaoka Anesthesia is a network of anesthesiologists who hire on-demand anesthetists for hospitals or surgeons. The project developed was a system of medical scales, from registration, through patient care to payment."
@@ -53,7 +53,7 @@ export function CasesPage() {
           },
         ]}
       />
-      <CasesCard
+      <GlassedCard
         title={"Fleury - Medical Scales"}
         description={`Fleury - Medical Scales was a project that I worked on from the backend to the web and mobile frontend. 
           Using Node.js, React and React Native. The idea of the project was to create a scale application for 
@@ -100,7 +100,7 @@ export function CasesPage() {
         ]}
       />
 
-      <CasesCard
+      <GlassedCard
         title={"GoHealth - NPS"}
         description={`GoHealth is a company that offers a series of products for clinics and hospitals. one of these products 
             are GoHealth NPS (Net Promoter Score). This product aimed to evaluate the satisfaction and chances of promotion by the patients 
