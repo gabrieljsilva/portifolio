@@ -1,0 +1,55 @@
+{
+  "name": "Gabriel de Jesus Silva",
+  "birthDate": "23/01/2000",
+  "currentRole": "Fullstack Software Developer",
+  "presentation": "Hello! My name is Gabriel de Jesus Silva. I've been a programmer for over 3 years . I have extensive experience in the Javascript ecosystem. I worked on several types of projects, mainly focused on Health and R&S.",
+  "resume": "My name is Gabriel de Jesus Silva, I'm 23 years old and I'm from Salvador, Bahia, Brazil, currently, I live in the state of Bahia, in the city of Senhor do Bonfim. I started my career as a developer at the end of 2018 by interning at a company in my city.",
+  "educationBackground": "I started learning programming in early 2018, as soon as I entered a technical course in Computer Science at the Instituto Federal de Educação, Ciência e Tecnologia, from which I graduated in 2019.\nIn the same year, I also began my graduation in Computer Science at the same institute, and have completed 4 semesters out of 8.",
+  "professionalBackground": "My first professional experience was at the end of 2018, when I did an internship at a company called Newtic. During this period, I learned to create APIs with Node.js and user interfaces with Vue.js.\n\nSince then, I have been providing services to other companies using technologies from the Javascript Ecosystem.",
+  "skills": [
+    {
+      "name": "Javascript",
+      "startedAt": "01-01-2018",
+      "description": "Javascript is my main language since I started my professional career as a programmer. I have extensive experience in your ecosystem both front-end and back-end.",
+      "iconUrl": "/javascript-icon"
+    },
+    {
+      "name": "Node.js",
+      "startedAt": "01-01-2018",
+      "description": "Node.js is the main technology I use for backend development. I have been working professionally with this technology since 2019 for the development of APIs and SSR applications.",
+      "iconUrl": "/javascript-icon"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Demand To Invoice",
+      "description": "Takaoka Anesthesia is a network of anesthesiologists who hire on-demand anesthetists for hospitals or surgeons. The project developed was a system of medical scales, from registration, through patient care to payment.",
+      "details": "",
+      "logoUrl": "/takaoka-icon.jpeg",
+      "icons": [
+        {
+          "label": "Node.js",
+          "iconUrl": "/nodejs-icon.svg"
+        }
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "role": "Fullstack Software Developer",
+      "description": "RedFox is a technology company. It works on several projects, mainly focused on the health sector. During the period that I worked at RedFox, I worked on several projects of that area such as: platforms of medical scales and NPS for clinics and hospitals.",
+      "company": {
+        "name": "RedFox Digital Solutions",
+        "logoUrl": "/redfox-logo.png",
+        "startedAt": "01-01-2022",
+        "finishedAt": "01-01-2022"
+      },
+      "technologies": [
+        {
+          "label": "Node.js",
+          "iconUrl": "/nodejs-icon.svg"
+        }
+      ]
+    }
+  ]
+}
