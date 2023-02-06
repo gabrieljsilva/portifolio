@@ -19,7 +19,7 @@ import { GlassedCard } from "../../components";
 
 export function ExperiencesPage() {
   return (
-    <Grid container px={2} spacing={5}>
+    <Grid container px={2} spacing={5} mt={-2}>
       <Grid item>
         <GlassedCard
           intervalDate={[new Date("2021-03-02"), new Date("2022-09-02")]}
