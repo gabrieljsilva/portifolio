@@ -40,7 +40,7 @@ export function AboutPage() {
                 },
               }}
             >
-              Who am I?
+              Quem eu sou?
             </Typography>
 
             <Typography
@@ -52,10 +52,11 @@ export function AboutPage() {
                 },
               }}
             >
-              My name is <strong>Gabriel de Jesus Silva</strong>, I&apos;m <strong> {myAge} years old </strong> and
-              I&apos;m from <strong>Salvador, Bahia, Brazil</strong>, currently, I live in the state of
-              <strong> Bahia</strong>, in the city of <strong>Senhor do Bonfim</strong>. I started my career as a
-              developer at the end of 2018 by interning at a company in my city.
+              Meu nome é <strong>Gabriel de Jesus Silva</strong>, eu tenho <strong> {myAge} anos </strong> e eu sou de{" "}
+              <strong>Salvador, Bahia</strong>. Atualmente eu moro no interior do estado da
+              <strong> Bahia</strong>, na cidade de <strong>Senhor do Bonfim</strong>. Eu comecei minha carreira como
+              programador no final de 2018, estagiando em uma empresa da minha cidade, onde aprendi a algumas das
+              tecnologias que utilizo até hoje.
             </Typography>
             <Box
               position={"absolute"}
@@ -104,19 +105,20 @@ export function AboutPage() {
               variant={"h1"}
               color={"white"}
             >
-              Educational Background
+              Formação Técnica
             </Typography>
             <Typography textAlign={"center"} color={"white"} variant={"body2"} lineHeight={"1.5rem"}>
-              I started learning programming in early 2018, as soon as I entered a technical course in
-              <strong> Computer Science</strong> at the
-              <strong> Instituto Federal de Educação, Ciência e Tecnologia</strong>, from which I graduated in
-              <strong> 2019</strong>. <br />
-              In the same year, I also began my graduation in <strong>Computer Science</strong> at the same institute,
-              and have completed 4 semesters out of 8.
+              Eu tenho formação técnica em <strong>informática</strong> pelo
+              <strong> Instituto Federal de Educação, Ciência e Tecnologia</strong>. Durante o curso aprendi as bases da
+              programação e tive a oportunidade de realizar um <strong>estágio </strong>na área. A duração do curso foi
+              de <strong> 1 ano e 6 meses</strong>, contando com meu tempo de experiência no estágio.
+              <br />
+              <br />
+              Além disso também fiz 4 semestres de 8 do curso de Ciências da Computação, também pelo Instituto Federal.
             </Typography>
             <Stack mt={6} width={"100%"} alignItems={"center"}>
               <Link to={"/skills"}>
-                <Button variant={"outlined"}>see my skills</Button>
+                <Button variant={"outlined"}>Veja minhas habilidades</Button>
               </Link>
             </Stack>
           </GlassedContainer>
@@ -132,20 +134,22 @@ export function AboutPage() {
               variant={"h1"}
               color={"white"}
             >
-              Experiences
+              Experiências
             </Typography>
             <Typography textAlign={"center"} color={"white"} variant={"body2"} lineHeight={"1.5rem"}>
-              My first professional experience was at the end of <strong>2018</strong>, when I did an internship at a
-              company called <strong>Newtic</strong>. During this period, I learned to create APIs with{" "}
-              <strong>Node.js</strong> and user interfaces with <strong>Vue.js</strong>.
+              Desde que terminei meu estágio, já passei por algumas empresas e ajudei no desenvolvimento de vários
+              projetos. A maior parte desses projetos foram voltados para a área da saúde, mas também já atuei em
+              projetos voltados para Lawtechs e R&S.
             </Typography>
+            <br />
             <Typography textAlign={"center"} color={"white"} variant={"body2"} lineHeight={"1.5rem"}>
-              Since then, I have been providing services to other companies using technologies from the{" "}
-              <strong>Javascript Ecosystem</strong>.
+              Em todas as empresas que já prestei serviço eu pude aprender tecnologias e técnicas novas que me agregaram
+              valor como profissional. Além de conhecer pessoas que me ajudaram no meu desenvolvimento pessoal.
             </Typography>
+
             <Stack mt={6} width={"100%"} alignItems={"center"}>
               <Link to={"/cases"}>
-                <Button variant={"outlined"}>see all my experiences</Button>
+                <Button variant={"outlined"}>Veja os projetos em que trabalhei</Button>
               </Link>
             </Stack>
           </GlassedContainer>
@@ -159,7 +163,7 @@ export function AboutPage() {
         onClose={() => setIsContactModalOpen(false)}
       >
         <Box px={3} pb={5}>
-          <Typography>Contact-me</Typography>
+          <Typography>Entre em contato</Typography>
           <ContactMeForm />
         </Box>
       </Modal>
