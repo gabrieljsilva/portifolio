@@ -4,6 +4,7 @@ import { GlassedContainer } from "../glassed-container";
 import { format } from "date-fns";
 import { ArrowDownwardRounded, ArrowUpwardRounded } from "@mui/icons-material";
 import { PaginatedIconListItem, PaginatedIconList } from "../../paginated-icon-list";
+import { useLocaleContext } from "../../../contexts/locale/locale-context";
 
 interface GlassedCardProps {
   title: string;
@@ -28,6 +29,7 @@ export function GlassedCard({
   const [cardWidth, setCardWidth] = useState(0);
   const [isAccordionExpanded, setIsAccordionExpanded] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+  const { locale } = useLocaleContext();
 
   useEffect(() => {
     if (cardRef?.current?.offsetWidth) {
@@ -38,10 +40,10 @@ export function GlassedCard({
   const formatInterval = () => {
     if (intervalDate) {
       const [start, end] = intervalDate;
-      const startDateString = format(start, "MMM yyyy");
-      const endDateString = format(end, "MMM yyyy");
+      const startDateString = format(start, "MMM yyyy", { locale });
+      const endDateString = format(end, "MMM yyyy", { locale });
 
-      return `${startDateString} to ${endDateString}`;
+      return `${startDateString} á ${endDateString}`;
     }
   };
 

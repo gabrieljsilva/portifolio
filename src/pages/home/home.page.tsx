@@ -34,7 +34,7 @@ export function HomePage() {
               variant={"h1"}
               color={"white"}
             >
-              Hello, I&apos;m Gabriel Silva
+              Olá, Eu sou Gabriel Silva
             </Typography>
             <Typography
               sx={{
@@ -69,15 +69,14 @@ export function HomePage() {
         <GlassedContainer>
           <Stack alignItems={"center"} gap={5}>
             <Typography textAlign={"center"} color={"white"} variant={"body1"}>
-              Hello!!! My name is <strong> Gabriel de Jesus Silva</strong>. I&apos;ve been a programmer for over
-              <strong> {totalExperienceYears} years </strong>. I have extensive experience in the{" "}
-              <strong> Javascript </strong> ecosystem. I worked on several types of projects, mainly focused on{" "}
-              <strong> Health </strong> and
-              <strong> R&S. </strong>
+              E aí! Meu nome é <strong> Gabriel de Jesus Silva</strong>. Eu sou programador há mais de
+              <strong> {totalExperienceYears} anos</strong>. Eu tenho ampla experiência no ecossistema{" "}
+              <strong> Javascript</strong>. Eu já trabalhei em vários tipos de projetos, principalmentos voltados para a
+              área de <strong> Saúde </strong> e<strong> R&S. </strong>
             </Typography>
 
             <Link to={"/about"}>
-              <Button variant={"outlined"}>See more about me</Button>
+              <Button variant={"outlined"}>Veja mais sobre mim</Button>
             </Link>
           </Stack>
         </GlassedContainer>

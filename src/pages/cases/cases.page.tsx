@@ -18,9 +18,9 @@ export function CasesPage() {
     <Stack width={"100%"} px={2} rowGap={8}>
       <GlassedCard
         title={"Demand To Invoice"}
-        description={
-          "Takaoka Anesthesia is a network of anesthesiologists who hire on-demand anesthetists for hospitals or surgeons. The project developed was a system of medical scales, from registration, through patient care to payment."
-        }
+        description={`
+        A Takaoka Anestesia é uma rede de anestesiologistas que contrata anestesistas sob demanda para hospitais ou cirurgiões. O projeto Demand To Invoice desenvolvido foi um sistema de escalas médicas, que atende o cliente desde o cadastro, passando pelo atendimento ao paciente até o pagamento.
+        `}
         thumbnailUrl={"/images/logo/takaoka-logo.png"}
         technologies={[
           {
@@ -54,11 +54,10 @@ export function CasesPage() {
         ]}
       />
       <GlassedCard
-        title={"Fleury - Medical Scales"}
-        description={`Fleury - Medical Scales was a project that I worked on from the backend to the web and mobile frontend. 
-          Using Node.js, React and React Native. The idea of the project was to create a scale application for 
-          doctors in the Fleury network. The objective was to facilitate the negotiation of scales between the 
-          doctors.`}
+        title={"Fleury - Escalas Médicas"}
+        description={`
+         Fleury - Escalas Médicas foi um projeto que trabalhei desde o back-end até o front-end web e mobile. Usando Node.js, React e React Native. A ideia do projeto era criar um aplicativo de escala para médicos da rede Fleury. O objetivo era facilitar a negociação de escalas entre os médicos.
+          `}
         thumbnailUrl={"/images/logo/fleury-logo.png"}
         technologies={[
           {
@@ -102,9 +101,11 @@ export function CasesPage() {
 
       <GlassedCard
         title={"GoHealth - NPS"}
-        description={`GoHealth is a company that offers a series of products for clinics and hospitals. one of these products 
-            are GoHealth NPS (Net Promoter Score). This product aimed to evaluate the satisfaction and chances of promotion by the patients 
-            of our clients.`}
+        description={`
+          A GoHealth é uma empresa que oferece uma série de produtos para clínicas e hospitais. um desses produtos
+           são GoHealth NPS (Net Promoter Score). Este produto tem como objetivo avaliar a satisfação e as chances de promoção por parte dos pacientes
+           dos hospitais parceiros.
+        `}
         thumbnailUrl={"/images/logo/gohealth-logo.png"}
         technologies={[
           {
