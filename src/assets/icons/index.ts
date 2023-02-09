@@ -15,6 +15,8 @@ import github from "./github-icon.svg";
 import vue from "./vue-icon.svg";
 import mySql from "./mysql-logo.svg";
 import mongoDB from "./mongodb-icon.svg";
+import express from "./express-icon.svg";
+import bootstrap from "./bootstrap-icon.png";
 
 export const javascriptIcon = javascript;
 export const reactIcon = react;
@@ -33,3 +35,5 @@ export const githubIcon = github;
 export const vueIcon = vue;
 export const mySqlIcon = mySql;
 export const mongoDBIcon = mongoDB;
+export const expressIcon = express;
+export const bootstrapIcon = bootstrap;

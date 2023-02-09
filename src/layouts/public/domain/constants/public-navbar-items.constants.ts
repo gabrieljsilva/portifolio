@@ -3,27 +3,27 @@ import { NavbarItemProps } from "../../../../components/navbar/fragments";
 export const publicMenuItems: Array<Omit<NavbarItemProps, "active">> = [
   {
     key: "HOME",
-    name: "Home",
+    name: "Início",
     path: "/",
   },
   {
     key: "ABOUT",
-    name: "About me",
+    name: "Sobre mim",
     path: "/about",
   },
   {
     key: "SKILLS",
-    name: "Skills",
+    name: "Habilidades",
     path: "/skills",
   },
   {
     key: "CASES",
-    name: "Cases",
+    name: "Projetos",
     path: "/cases",
   },
   {
     key: "EXPERIENCE",
-    name: "Experiences",
+    name: "Experiências",
     path: "/experiences",
   },
 ];

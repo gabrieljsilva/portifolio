@@ -26,10 +26,8 @@ export function ExperiencesPage() {
           title={"RedFox Digital Solutions"}
           subTitle={"Fullstack Software Developer"}
           description={`
-          RedFox is a technology company. It works on several projects, mainly
-          focused on the health sector. During the period that I worked at RedFox, I worked on several projects of that
-          area such as: platforms of medical scales and NPS for clinics and hospitals.
-        `}
+           A RedFox é uma empresa de tecnologia que atua em diversos projetos, principalmente voltados para a área da saúde. Durante o período que trabalhei na RedFox, atuei em diversos projetos dessa área como: plataformas de escalas médicas e NPS para clínicas e hospitais.
+          `}
           thumbnailUrl={"/images/logo/redfox-logo.svg"}
           technologies={[
             {
@@ -85,12 +83,7 @@ export function ExperiencesPage() {
           title={"Cameja"}
           subTitle={"Software Developer"}
           description={`
-          Cameja is a lawtech company that aims to facilitate the work of 
-          lawyers, mediators, and arbitrators by creating and visualizing petitions and judicial 
-          movements automatically using pre-established models. The company's main objective is to 
-          integrate regional courts from various states. While I was employed at Cameja, I also worked on 
-          a project called Pecunias, which aimed to divide large precatory titles into 
-          smaller, more affordable ones for negotiation.
+             A Cameja é uma lawtech que visa facilitar o trabalho de advogados, mediadores e árbitros por meio da criação e visualização de petições e movimentações jurídicas de forma automática a partir de modelos pré-estabelecidos. O principal objetivo da empresa é integrar os tribunais regionais de vários estados do país. 
         `}
           thumbnailUrl={"/images/logo/cameja-logo.svg"}
           technologies={[
@@ -119,10 +112,8 @@ export function ExperiencesPage() {
           title={"Newtic"}
           subTitle={"Software Developer Intern"}
           description={`
-          I worked as an intern in web programming at the company.
-          During the internship I developed APIs using Node.js, Express and MongoDB
-          and user interfaces using Vue.js.
-        `}
+            Trabalhei como estagiário em programação web na Newtic. Durante o estágio desenvolvi APIs utilizando Node.js, Express e MongoDB e interfaces de usuário utilizando Vue.js.
+          `}
           thumbnailUrl={"/images/logo/newtic-logo.svg"}
           technologies={[
             {
