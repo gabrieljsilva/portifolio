@@ -159,7 +159,7 @@ export function AboutPage() {
         onClose={() => setIsContactModalOpen(false)}
       >
         <Box px={3} pb={5}>
-          <Typography>Entre em Contato</Typography>
+          <Typography>Contact-me</Typography>
           <ContactMeForm />
         </Box>
       </Modal>
