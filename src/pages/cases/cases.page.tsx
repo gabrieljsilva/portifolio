@@ -1,8 +1,11 @@
 import { GlassedCard } from "../../components";
 import { Stack } from "@mui/material";
 import {
+  bootstrapIcon,
   dockerIcon,
+  expressIcon,
   graphQLIcon,
+  mySqlIcon,
   nestjsIcon,
   nextJsIcon,
   nodeIcon,
@@ -140,6 +143,31 @@ export function CasesPage() {
           {
             name: "Vite",
             icon: viteIcon,
+          },
+        ]}
+      />
+      <GlassedCard
+        title={"Pecunias"}
+        description={`
+         Este foi um projeto que visava dividir grandes títulos de precatórios em outros títulos menores, tornando-os mais acessiveis para negociação.
+         O Projeto além de gerenciar as transações entre os usuários também gerava contratos automaticamente.
+        `}
+        technologies={[
+          {
+            name: "Node.js",
+            icon: nodeIcon,
+          },
+          {
+            name: "MySQL",
+            icon: mySqlIcon,
+          },
+          {
+            name: "Express.js",
+            icon: expressIcon,
+          },
+          {
+            name: "Bootstrap",
+            icon: bootstrapIcon,
           },
         ]}
       />

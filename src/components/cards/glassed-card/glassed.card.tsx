@@ -4,7 +4,7 @@ import { GlassedContainer } from "../glassed-container";
 import { format } from "date-fns";
 import { ArrowDownwardRounded, ArrowUpwardRounded } from "@mui/icons-material";
 import { PaginatedIconListItem, PaginatedIconList } from "../../paginated-icon-list";
-import { useLocaleContext } from "../../../contexts/locale/locale-context";
+import { useLocaleContext } from "../../../contexts";
 
 interface GlassedCardProps {
   title: string;
@@ -12,7 +12,7 @@ interface GlassedCardProps {
   intervalDate?: [Date, Date];
   description: string | ReactNode;
   details?: string | ReactNode;
-  thumbnailUrl: string;
+  thumbnailUrl?: string;
   technologies: PaginatedIconListItem[];
 }
 
@@ -75,7 +75,18 @@ export function GlassedCard({
               },
             }}
           >
-            <img src={thumbnailUrl} width={"100%"} alt={"company logo image"} />
+            {thumbnailUrl && <img src={thumbnailUrl} width={"100%"} alt={"company logo image"} />}
+            {!thumbnailUrl && (
+              <Typography
+                textAlign={"center"}
+                color={"white"}
+                fontSize={"4rem"}
+                fontWeight={"600"}
+                fontStyle={"italic"}
+              >
+                {title}
+              </Typography>
+            )}
             {intervalDate && (
               <Typography
                 mt={1}
