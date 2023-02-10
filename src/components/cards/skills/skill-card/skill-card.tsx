@@ -1,6 +1,7 @@
 import { GlassedContainer } from "../../glassed-container";
 import { Box, Stack, Typography } from "@mui/material";
-import { differenceInYears } from "date-fns";
+import { calculateAndFormatElapsedTime } from "../../../../utils";
+import { useLocaleContext } from "../../../../contexts";
 
 export interface SkillCardProps {
   name: string;
@@ -10,7 +11,8 @@ export interface SkillCardProps {
 }
 
 export function SkillCard({ name, icon, description, startUsing }: SkillCardProps) {
-  const yearsOfExperience = differenceInYears(new Date(), startUsing);
+  const { locale } = useLocaleContext();
+  const distance = calculateAndFormatElapsedTime(startUsing, new Date(), locale);
 
   return (
     <GlassedContainer position={"relative"} height={"100%"}>
@@ -23,7 +25,7 @@ export function SkillCard({ name, icon, description, startUsing }: SkillCardProp
             {name}
           </Typography>
           <Typography textAlign={"center"} variant={"subtitle1"} color={"white"} fontSize={"1.25rem"}>
-            {yearsOfExperience} anos de experiência
+            {distance} de experiência
           </Typography>
         </Stack>
       </Stack>

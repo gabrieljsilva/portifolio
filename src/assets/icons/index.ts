@@ -17,6 +17,8 @@ import mySql from "./mysql-logo.svg";
 import mongoDB from "./mongodb-icon.svg";
 import express from "./express-icon.svg";
 import bootstrap from "./bootstrap-icon.png";
+import distribute from "./distribute-icon.svg";
+import aws from "./aws-icon.svg";
 
 export const javascriptIcon = javascript;
 export const reactIcon = react;
@@ -37,3 +39,5 @@ export const mySqlIcon = mySql;
 export const mongoDBIcon = mongoDB;
 export const expressIcon = express;
 export const bootstrapIcon = bootstrap;
+export const distributeIcon = distribute;
+export const awsIcon = aws;

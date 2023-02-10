@@ -1,6 +1,8 @@
 import { SkillCard, SkillCardProps } from "../../components";
 import { Box, Grid, useTheme } from "@mui/material";
 import {
+  awsIcon,
+  distributeIcon,
   dockerIcon,
   graphQLIcon,
   javascriptIcon,
@@ -56,6 +58,23 @@ const experiences: SkillCardProps[] = [
     icon: nestjsIcon,
     startUsing: new Date("2021-01-01"),
     description: `Comecei a usar o Nest.js há alguns anos, porque procurava um framework escalável e com boa manutenabilidade. Gostei do Nest.js por sua usabilidade grande escala de usos, desde desenvolvimento web, com REST, GraphQL e microsserviços até aplicações autônomas como CLIs.`,
+  },
+  {
+    name: "Microserviços",
+    icon: distributeIcon,
+    startUsing: new Date("2022-12-01"),
+    description: `
+      Eu comecei a trabalhar com microserviços em um projeto que requeria essa arquitetura. Desde então, tenho me aprofundado nesse assunto. Para criar e consumir os microserviços, estou utilizando principamente o framework o Nestjs.
+      Trabalhar com microserviços pode ser bem desafiador, mas abre muitas possibilidades. 
+    `,
+  },
+  {
+    name: "Amazon Web Services",
+    icon: awsIcon,
+    startUsing: new Date("2022-08-01"),
+    description: `
+      Eu utilizo ambientes cloud da AWS principalmente para integrações e deploy de aplicações. Dentre as ferramentas da AWS, as principais que utilizei são: S3, EC2 e Amplify.
+    `,
   },
 ];
 
