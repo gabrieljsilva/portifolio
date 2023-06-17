@@ -1,5 +1,5 @@
 import { BottomNavigationAction, BottomNavigation as MuiBottomNavigation } from "@mui/material";
-import { BadgeOutlined, Done, Home, Person, Star } from "@mui/icons-material";
+import { BadgeOutlined, Done, GitHub, Home, Person, Star } from "@mui/icons-material";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export function BottomNavigation() {
@@ -22,32 +22,36 @@ export function BottomNavigation() {
       <BottomNavigationAction
         sx={{ color: "white", minWidth: "60px" }}
         value={"/"}
-        label={"Home"}
         icon={<Home fontSize={"small"} />}
       />
       <BottomNavigationAction
         sx={{ color: "white", minWidth: "60px" }}
         value={"/about"}
-        label={"About"}
-        icon={<Person />}
+        label={"Sobre"}
+        icon={<Person fontSize={"small"} />}
       />
       <BottomNavigationAction
         sx={{ color: "white", minWidth: "60px" }}
         value={"/skills"}
-        label={"Skills"}
-        icon={<Star />}
+        label={"Habilidades"}
+        icon={<Star fontSize={"small"} />}
       />
       <BottomNavigationAction
         sx={{ color: "white", minWidth: "60px" }}
         value={"/cases"}
         label={"Cases"}
-        icon={<Done />}
+        icon={<Done fontSize={"small"} />}
       />
       <BottomNavigationAction
         sx={{ color: "white", minWidth: "60px" }}
         value={"/experiences"}
-        label={"Experiences"}
-        icon={<BadgeOutlined />}
+        label={"Experiências"}
+        icon={<BadgeOutlined fontSize={"small"} />}
+      />
+      <BottomNavigationAction
+        sx={{ color: "white", minWidth: "60px" }}
+        value={"/contributions"}
+        icon={<GitHub fontSize={"small"} />}
       />
     </MuiBottomNavigation>
   );
