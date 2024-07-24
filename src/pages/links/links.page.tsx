@@ -19,7 +19,7 @@ export function LinksPage() {
       </Typography>
       <SocialLink name={"LinkedIn"} iconUrl={linkedInIcon} url={"https://www.linkedin.com/in/gabrieldjs21"} />
       <SocialLink name={"Instagram"} iconUrl={instagramIcon} url={"https://www.instagram.com/gabrieljsillva"} />
-      <SocialLink name={"GitHub"} iconUrl={githubIcon} url={"https://www.linkedin.com/in/gabrieldjs21/"} />
+      <SocialLink name={"GitHub"} iconUrl={githubIcon} url={"https://github.com/gabrieljsilva"} />
       <SocialLink name={"E-mail"} iconUrl={emailIcon} url={"mailto:contato@gabrieljs.dev"} />
     </Stack>
   );
