@@ -19,6 +19,7 @@ import express from "./express-icon.svg";
 import bootstrap from "./bootstrap-icon.png";
 import distribute from "./distribute-icon.svg";
 import aws from "./aws-icon.svg";
+import instagram from "./instagram-icon.svg";
 
 export const javascriptIcon = javascript;
 export const reactIcon = react;
@@ -41,3 +42,4 @@ export const expressIcon = express;
 export const bootstrapIcon = bootstrap;
 export const distributeIcon = distribute;
 export const awsIcon = aws;
+export const instagramIcon = instagram;

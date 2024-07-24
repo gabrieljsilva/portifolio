@@ -9,7 +9,7 @@ import { useLocaleContext } from "../../../contexts";
 interface GlassedCardProps {
   title: string;
   subTitle?: string;
-  intervalDate?: [Date, Date];
+  intervalDate?: [Date, Date | undefined];
   description: string | ReactNode;
   details?: string | ReactNode;
   thumbnailUrl?: string;
@@ -41,9 +41,15 @@ export function GlassedCard({
     if (intervalDate) {
       const [start, end] = intervalDate;
       const startDateString = format(start, "MMM yyyy", { locale });
-      const endDateString = format(end, "MMM yyyy", { locale });
 
-      return `${startDateString} á ${endDateString}`;
+      let formatedDateString = `${startDateString}`;
+
+      if (end) {
+        const endDateString = format(end, "MMM yyyy", { locale });
+        formatedDateString += ` - ${endDateString}`;
+      }
+
+      return formatedDateString;
     }
   };
 

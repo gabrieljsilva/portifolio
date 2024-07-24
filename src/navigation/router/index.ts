@@ -1,8 +1,9 @@
+import { RouteItem } from "../../types";
 import { aboutRoutes } from "./about";
 import { casesRoutes } from "./cases";
 import { homeRoutes } from "./home";
 import { skillsRoutes } from "./skills";
-import { RouteItem } from "../../types";
+import { linksRoutes } from "./links";
 import { experiencesRoutes } from "./experiences";
 
 type AvailableRoutes =
@@ -10,7 +11,8 @@ type AvailableRoutes =
   | keyof typeof casesRoutes
   | keyof typeof homeRoutes
   | keyof typeof skillsRoutes
-  | keyof typeof experiencesRoutes;
+  | keyof typeof experiencesRoutes
+  | keyof typeof linksRoutes;
 
 const availableRoutes = [
   ...Object.keys(aboutRoutes),
@@ -18,6 +20,7 @@ const availableRoutes = [
   ...Object.keys(homeRoutes),
   ...Object.keys(skillsRoutes),
   ...Object.keys(experiencesRoutes),
+  ...Object.keys(linksRoutes),
 ] as AvailableRoutes[];
 
 export function createRouter() {
@@ -27,6 +30,7 @@ export function createRouter() {
     homeRoutes,
     skillsRoutes,
     experiencesRoutes,
+    linksRoutes,
   };
 
   function toArray() {

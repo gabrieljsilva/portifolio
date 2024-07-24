@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import {
+  distributeIcon,
   dockerIcon,
   graphQLIcon,
   javascriptIcon,
@@ -20,6 +21,59 @@ import { GlassedCard } from "../../components";
 export function ExperiencesPage() {
   return (
     <Grid container px={2} spacing={5} mt={-2}>
+      <Grid item>
+        <GlassedCard
+          intervalDate={[new Date("2024-03-02"), undefined]}
+          title={"Hospital Israelita Albert Einstein"}
+          subTitle={"Fullstack Software Developer"}
+          description={`
+            O Hospital Israelita Albert Einstein é uma instituição de saúde de renome internacional, conhecida pela excelência em atendimento médico, tecnologia de ponta e inovação em tratamentos. Como desenvolvedor fullstack, contribuí em diversas iniciativas tecnológicas no hospital, principalmente no desenvolvimento de ferramentas para o atendimento primário à saúde, aprimorando a eficiência e a qualidade dos serviços oferecidos aos pacientes.
+          `}
+          thumbnailUrl={"/images/logo/hiae.png"}
+          technologies={[
+            {
+              name: "Javascript",
+              icon: javascriptIcon,
+            },
+            {
+              name: "Node.js",
+              icon: nodeIcon,
+            },
+            {
+              name: "Typescript",
+              icon: typescriptIcon,
+            },
+            {
+              name: "React.js",
+              icon: reactIcon,
+            },
+            {
+              name: "Nest.js",
+              icon: nestjsIcon,
+            },
+            {
+              name: "MySQL",
+              icon: mySqlIcon,
+            },
+            {
+              name: "GraphQL",
+              icon: graphQLIcon,
+            },
+            {
+              name: "Docker",
+              icon: dockerIcon,
+            },
+            {
+              name: "Vite",
+              icon: viteIcon,
+            },
+            {
+              name: "Microserviços",
+              icon: distributeIcon,
+            },
+          ]}
+        />
+      </Grid>
       <Grid item>
         <GlassedCard
           intervalDate={[new Date("2021-03-02"), new Date("2022-09-02")]}
