@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
 export function useProgressiveImage(src: string) {
-  const [sourceLoaded, setSourceLoaded] = useState<string | null>(null);
+	const [sourceLoaded, setSourceLoaded] = useState<string | null>(null);
 
-  useEffect(() => {
-    const img = new Image();
-    img.src = src;
-    img.onload = () => setSourceLoaded(src);
-  }, [src]);
+	useEffect(() => {
+		const img = new Image();
+		img.src = src;
+		img.onload = () => setSourceLoaded(src);
+	}, [src]);
 
-  return sourceLoaded;
+	return sourceLoaded;
 }

@@ -4,14 +4,14 @@ import { FadeInOutTransition } from "../../../transitions";
 import { LinksPage } from "../../../pages/links";
 
 enum LinksRoutes {
-  "LINKS" = "LINKS",
+	LINKS = "LINKS",
 }
 
 export const linksRoutes: Record<LinksRoutes, RouteItem> = {
-  LINKS: {
-    path: "/links",
-    Layout: LinksLayout,
-    Screen: LinksPage,
-    Transition: FadeInOutTransition,
-  },
+	LINKS: {
+		path: "/links",
+		Layout: LinksLayout,
+		Screen: LinksPage,
+		Transition: FadeInOutTransition,
+	},
 };

@@ -4,14 +4,14 @@ import { HomePage } from "../../../pages";
 import { FadeInOutTransition } from "../../../transitions";
 
 enum HomeRoutes {
-  "HOME" = "HOME",
+	HOME = "HOME",
 }
 
 export const homeRoutes: Record<HomeRoutes, RouteItem> = {
-  HOME: {
-    path: "/",
-    Layout: PublicLayout,
-    Screen: HomePage,
-    Transition: FadeInOutTransition,
-  },
+	HOME: {
+		path: "/",
+		Layout: PublicLayout,
+		Screen: HomePage,
+		Transition: FadeInOutTransition,
+	},
 };

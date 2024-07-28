@@ -4,14 +4,14 @@ import { ExperiencesPage } from "../../../pages";
 import { FadeInOutTransition } from "../../../transitions";
 
 enum ExperiencesRoutes {
-  "EXPERIENCES" = "EXPERIENCES",
+	EXPERIENCES = "EXPERIENCES",
 }
 
 export const experiencesRoutes: Record<ExperiencesRoutes, RouteItem> = {
-  EXPERIENCES: {
-    path: "/experiences",
-    Layout: PublicLayout,
-    Screen: ExperiencesPage,
-    Transition: FadeInOutTransition,
-  },
+	EXPERIENCES: {
+		path: "/experiences",
+		Layout: PublicLayout,
+		Screen: ExperiencesPage,
+		Transition: FadeInOutTransition,
+	},
 };

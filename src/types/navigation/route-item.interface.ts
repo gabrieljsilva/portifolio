@@ -1,8 +1,8 @@
 import { ElementType } from "react";
 
 export interface RouteItem {
-  path: string;
-  Layout: ElementType;
-  Screen: ElementType;
-  Transition?: ElementType;
+	path: string;
+	Layout: ElementType;
+	Screen: ElementType;
+	Transition?: ElementType;
 }
